@@ -1,0 +1,95 @@
+.main__wrapper{
+    margin-bottom: 18rem;
+    margin-top: 15rem;
+
+    
+}
+
+
+.sign__wrapper{
+    *{
+        // border: solid 1px;
+    }
+    padding: 0 3rem;
+    width: 100%;
+    margin: 0 auto;
+    @include respond(tab-normal) {
+        padding: 0 0rem;
+    }
+    @include displayflex(flex-start, center);
+    color: $color-black;
+    .sign__left{
+        width: 50%;
+        margin-right: 4rem;
+        font-size: $default-font-size;
+
+        &-title{
+            font-size: $xl-font-size;
+            font-weight: 700;
+        }
+
+        .form-row{
+            margin: 2.4rem 0 ;
+
+            label{
+                display: block;
+                margin-bottom: 1rem;
+            }
+            input{
+                
+            }
+            
+            &__input {
+                display: block;
+                width: 100%;
+                height: 3.6rem;
+                padding: .4rem 0.2rem;
+                border-bottom: solid .1rem $color-black;
+                margin-bottom: 1.4rem;
+                transition: all .3s;
+        
+                // @include respond(tab-port) {
+                //     width: 100%;
+                // }
+        
+                &:focus {
+                    outline: none;
+                    border-bottom: solid .1rem $color-black;
+                }
+        
+                &:focus:invalid {
+                    border-bottom: .1rem solid $color-red;
+                }
+                &::-webkit-input-placeholder {
+                    color: $color-grey-dark-2;
+                }
+            }
+        
+        
+            &__label {
+                font-size: 1.2rem;
+                font-weight: 700;
+                display: block;
+                transition: all .3s;
+                
+            }
+        
+            &__input:invalid + &__label {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-4rem);
+            }
+            
+        }
+        .account__btn{
+            width: 18rem;
+
+            &-box{
+
+
+                
+            }
+        }
+    }
+   
+}
