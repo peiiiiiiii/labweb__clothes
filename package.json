@@ -1,0 +1,34 @@
+{
+  "name": "clothes",
+  "version": "1.0.0",
+  "description": "practice clothes website",
+  "main": "index.js",
+  "homepage": "https://peiiiiiiii.github.io/labweb__clothes",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss css/style.css -w",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json",
+    "build": "parcel build --no-minify index.html "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^5.1.9",
+    "gh-pages-deploy": "^0.5.1",
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "gh-pages": "^4.0.0",
+    "live-server": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peiiiiiiii/labweb__clothes.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/peiiiiiiii/labweb__clothes/issues"
+  }
+}

@@ -1,0 +1,269 @@
+.item__wrapper-slider{
+    width: 100%;
+    height: 100%;
+    
+
+    overflow: hidden;
+    position: relative;
+
+    .slider-item{
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: absolute;
+        transition: transform 400ms;
+
+        &.active,
+        &.prev-item,
+        &.next-item {
+            display: block;
+        }
+        img{
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
+            background-size:cover;
+            width: 95%;
+        }
+    }
+    
+    .slider .slider-item.active,
+    .slider .slider-item.prev-item,
+    .slider .slider-item.next-item {
+        display: block;
+    }
+
+    .slider-item.prev-item,
+    .slider-item.active.slide-next {
+        transform: translateX(-100%);
+    }
+
+    .slider-item.active.slide-prev,
+    .slider-item.next-item {
+        transform: translateX(100%);
+    }
+
+    .slider-item.prev-item.slide-end,
+    .slider-item.next-item.slide-end {
+        transform: translateX(0);
+    }
+
+    .slide-indicators {
+        position: absolute;
+        z-index: 20;
+        bottom: .4rem;
+        left: 45%;
+        transform: translateX(-30%);
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+
+    .slider-control-prev,
+    .slider-control-next {
+        position: absolute;
+        z-index: 20;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.3;
+        transition: opacity 300ms;
+    }
+
+    .slider-control-prev {
+        left: 20px;
+    }
+
+    .slider-control-prev:hover {
+        opacity: 1;
+    }
+
+    .slider-control-next {
+        right: 5rem;
+    }
+
+    .slider-control-next:hover {
+        opacity: 1;
+    }
+
+    .slide-indicator {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: #ffffff;
+        opacity: 0.5;
+        margin: 0 8px;
+    }
+
+    .slide-indicator.active {
+        opacity: 1;
+    }
+
+    
+    
+    // end
+}
+
+
+
+<img aria-hidden="true" src="img/prev.svg" alt="Previous Slide Button">
+
+
+
+<img aria-hidden="true" src="img/next.svg" alt="Next Slide Button">
+
+
+
+
+class Slider {
+    constructor(sliderElem) {
+        this.slider = sliderElem;
+        this.sliderItems = sliderElem.getElementsByClassName("slider-item");
+        this.indicators = sliderElem.getElementsByClassName("slide-indicator");
+        this.nextBtn = sliderElem.querySelector(".slider-control-next");
+        this.prevBtn = sliderElem.querySelector(".slider-control-prev");
+        this.currentIndex = 0;
+        this.prevItemIndex = this.sliderItems.length - 1;
+        this.nextItemIndex = 1;
+        this.isSliding = false;
+        this.posInitial = 0;
+        this.posFinal = 0;
+        this.posX1 = 0;
+        this.posX2 = 0;
+        
+        // Set Item Indexs if active class is specified on an element other than the first.
+        for (let i = 0; i < this.sliderItems.length; i++) {
+            if (this.sliderItems[i].classList.contains("active")){
+                this.currentIndex = i;
+                if (i + 1 === this.sliderItems.length) {
+                    this.nextItemIndex = 0;
+                }
+                this.nextItemIndex = i + 1;
+                if (i !== 0) {
+                    this.prevItemIndex = i - 1;
+                }
+                break;
+            }
+        }
+        this.setEventListeners();
+        this.indicators[this.currentIndex].classList.add("active");
+    }
+    setEventListeners() {
+        this.prevBtn.addEventListener("click", () => {
+            this.prev();
+        });
+        this.nextBtn.addEventListener("click", () => {
+            this.next();
+        });
+          // Mouse events
+          this.slider.addEventListener("mousedown", (e) => {
+            this.dragStart(e);
+        });
+        this.slider.addEventListener("touchstart", (e) => {
+            this.dragStart();
+        });
+        this.slider.addEventListener("touchend", (e) => {
+            this.dragEnd();
+        });
+        this.slider.addEventListener("touchmove", (e) => {
+            this.dragAction();
+        });
+    }
+    dragStart(e){
+        e = e || window.event;
+        e.preventDefault();
+        this.posInitial = this.slider.offsetLeft;
+        console.log(this.slider.offsetLeft);
+        if (e.type == 'touchstart') {
+            this.posX1 = e.touches[0].clientX;
+        } else {
+            this.posX1 = e.clientX;
+        document.onmouseup = this.dragEnd();
+        document.onmousemove = this.dragAction();
+        }
+    }
+    dragEnd(e){
+        this.posFinal = this.slider.offsetLeft;
+        if (posFinal - posInitial < -threshold) {
+            shiftSlide(1, 'drag');
+        } else if (htis.posFinal - this.posInitial > this.threshold) {
+            shiftSlide(-1, 'drag');
+        } else {
+            this.slider.style.left = (posInitial) + "px";
+        }
+
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+    dragAction(e){
+        e = e || window.event;
+    
+        if (e.type == 'touchmove') {
+        posX2 = posX1 - e.touches[0].clientX;
+        posX1 = e.touches[0].clientX;
+        } else {
+        posX2 = posX1 - e.clientX;
+        posX1 = e.clientX;
+        }
+        this.slider.style.left = (this.slider.offsetLeft - posX2) + "px";
+    }
+    setIndices(direction) { 
+        let index;
+        if (direction === "NEXT") {
+            index = this.currentIndex === this.sliderItems.length - 1 ? 0 : this.currentIndex + 1;
+        } 
+        if (direction === "PREV") {
+            index = this.currentIndex === 0 ? this.sliderItems.length - 1 : this.currentIndex - 1;
+        }
+        if (index === 0) {
+            this.currentIndex = index;
+            this.nextItemIndex = index + 1;
+            this.prevItemIndex = this.sliderItems.length - 1;
+        } else if (index === this.sliderItems.length - 1) {
+            this.currentIndex = this.sliderItems.length - 1;
+            this.nextItemIndex = 0;
+            this.prevItemIndex = this.currentIndex - 1;
+        } else {
+            this.currentIndex = index;
+            this.nextItemIndex = index + 1;
+            this.prevItemIndex = index - 1;
+        }
+    }
+    next() {
+        if (this.isSliding) return;
+        this.isSliding = !this.isSliding;
+        this.sliderItems[this.nextItemIndex].classList.add("next-item");
+        setTimeout(() => {
+            this.sliderItems[this.currentIndex].classList.add("slide-next");
+            this.sliderItems[this.nextItemIndex].classList.add("slide-end");
+            this.sliderItems[this.nextItemIndex].classList.add("active");
+        }, 20);
+        setTimeout(() => {
+            this.sliderItems[this.nextItemIndex].classList.remove("next-item", "slide-end");
+            this.sliderItems[this.currentIndex].classList.remove("slide-next", "active");
+            this.indicators[this.currentIndex].classList.remove("active");
+            this.indicators[this.nextItemIndex].classList.add("active");
+            this.setIndices("NEXT");
+            this.isSliding = false;
+        }, 400);
+    }
+    prev() {
+        if (this.isSliding) return;
+        this.isSliding = !this.isSliding;
+        this.sliderItems[this.prevItemIndex].classList.add("prev-item");
+        setTimeout(() => {
+            this.sliderItems[this.currentIndex].classList.add("slide-prev");
+            this.sliderItems[this.prevItemIndex].classList.add("slide-end");
+            this.sliderItems[this.prevItemIndex].classList.add("active");
+        }, 20);
+        setTimeout(() =>  {
+            this.sliderItems[this.prevItemIndex].classList.remove("prev-item", "slide-end");
+            this.sliderItems[this.currentIndex].classList.remove("slide-prev", "active");
+            this.indicators[this.currentIndex].classList.remove("active");
+            this.indicators[this.prevItemIndex].classList.add("active");
+            this.setIndices("PREV");
+            this.isSliding = false;
+        }, 400);
+    }
+}

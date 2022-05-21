@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./tryy.css" />
+  <link rel="stylesheet" href="./test.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <div id="head">
+    <div id="ic">
+      <img src="./img/c.png" width="20%" />
+    </div>
+    <div id="head_f">
+      <p>首頁 <span id="menu"> > 訂單管理</span> <span id="page"> > 訂單管理</span> </p>
+    </div>
+    <div id="head_r">
+      <button class="log">登出</button>
+    </div>
+  </div>
+  <div id="head_s">
+    <div id="he_rr">
+      <div id="he_b">
+        <img src="./img/arrow.png" width="100%" />
+      </div>
+      <div id="he_pp">
+        <p>Back to previous</p>
+      </div>
+    </div>
+    <!-- <p style="width: 20%; text-align: right">2022-04-28</p> -->
+    <div id="datee">
+      <input type="datetime-local" width="100%" style="border-radius: 15px; height: 25px" />
+    </div>
+  </div>
+  <div style="display: flex; width: 96%; margin: auto">
+    <div class="tab">
+      <div class="tablinks" onclick="opentab(event, 'bag'), GetCommodities(),change_root('商品管理',null)">
+        <img src="./img/bag.png" width="10%" height="10%" style="margin: 5px" />
+        <p>商品管理</p>
+      </div>
+      <div class="tablinks" onclick="opentab(event, 'user'),GetMembers(),change_root('顧客管理',null)">
+        <img src="./img/user.png" width="10%" height="10%" style="margin: 5px" />
+        <p>顧客管理</p>
+      </div>
+      <div class="tablinks" onclick="opentab(event, 'paper'),GetSales(),change_root('訂單管理',null)">
+        <img src="./img/paper.png" width="10%" height="10%" style="margin: 5px" />
+        <p>訂單管理</p>
+      </div>
+      <div class="tablinks" onclick="opentab(event, 'edit'),GetArticle(),change_root('文章管理',null)">
+        <img src="./img/edit.png" width="10%" height="10%" style="margin: 5px" />
+        <p>文章管理</p>
+      </div>
+      <div class="tablinks" onclick="opentab(event, 'ticket'),GetCoupons(),change_root('優惠券管理',null)">
+        <img src="./img/ticket.png" width="10%" height="10%" style="margin: 5px" />
+        <p>優惠券管理</p>
+      </div>
+      <div class="tablinks" onclick="opentab(event, 'dashboard'),change_root('數據分析',null)">
+        <img src="./img/dashboard.png" width="10%" height="10%" style="margin: 5px" />
+        <p>數據分析</p>
+      </div>
+      <div id="bodyle_set">
+        <div class="sett">
+          <img src="./img/gear.png" width="100%" style="margin: 5px" />
+          <p>Settings</p>
+        </div>
+        <div class="sett">
+          <img src="./img/reset.png" width="100%" style="margin: 5px" />
+          <p>Settings</p>
+        </div>
+        <div class="sett">
+          <img src="./img/megaphone.png" width="100%" style="margin: 5px" />
+          <p>Settings</p>
+        </div>
+        <div class="sett">
+          <img src="./img/question.png" width="100%" style="margin: 5px" />
+          <p>Settings</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="bag" class="tabcontent">
+      <div id="body_right">
+        <div style="display: flex; align-items: center">
+          <p style="
+                font-size: 30px;
+                font-weight: bolder;
+                margin: 20px 0px;
+                width: 92%;
+              ">
+            商品管理
+          </p>
+          <button class="body_btn" id="displaysign" onclick="start()" style="height: 40px">
+            新增商品
+          </button>
+        </div>
+        <div class="signform" id="signform" style="display: none">
+          <div>
+            <div class="signform" id="registerform" style="display: none">
+              <div class="signclose">
+                <img src="image/signclose.ico" width="35px" height="35px" onclick="signclose()" />
+              </div>
+            </div>
+            <div style="display: flex; line-height: 0px; margin: 10px">
+              <p>商品名稱：</p>
+              <input type="text" id="I_CommodityName" />
+            </div>
+            <div style="display: flex; line-height: 0px; margin: 10px">
+              <p>商品類別：</p>
+              <select name="item_option" id="I_CommodityKind">
+                <option class="I_CommodityKind" value="1">短褲</option>
+                <option class="I_CommodityKind" value="2">外套</option>
+                <option class="I_CommodityKind" value="3">長褲</option>
+              </select>
+            </div>
+            <div style="display: flex; line-height: 0px; margin: 10px">
+              <p>商品描述：</p>
+              <textarea name="story" rows="5" cols="33" id="I_Description"></textarea>
+            </div>
+            <div style="display: flex; line-height: 0px; margin: 10px">
+              <p>庫存數量：</p>
+              <textarea name="story" rows="5" cols="33" id="I_Material"></textarea>
+            </div>
+            <div style="display: flex; line-height: 0px; margin: 10px">
+              <p>商品規格：</p>
+              <select name="sex" id="I_CommodityTags">
+                <option value="1">男裝</option>
+                <option value="2">女裝</option>
+              </select>
+            </div>
+            <div class="center">
+              <!-- <div class="switch_demo">
+                <input type="checkbox" name="switch_demo" class="switch_demo-checkbox" id="I_isReleased" checked />
+                <label class="switch_demo-label" for="switch_demo">
+                  <span class="switch_demo-inner"></span>
+                  <span class="switch_demo-switch"></span>
+                </label>
+              </div> -->
+              <div class="switch">
+                <input class="switch-checkbox" id="I_isReleased" type="checkbox" name="switch-checkbox">
+                <label class="switch-label" for="I_isReleased">
+                  <span class="switch-txt" turnOn="上架" turnOff="下架"></span>
+                  <span class="switch-Round-btn"></span>
+                </label>
+              </div>
+            </div>
+            <div style="display: flex; line-height: 0px">
+              <p>商品價錢：NT$</p>
+              <input type="text" name="" id="I_Price" />
+              <p style="padding-left:10px;">商品特價：NT$</p>
+              <input type="text" name="" id="I_S_Price" />
+            </div>
+            <div style="display: flex; align-items: center; position: relative">
+              <p>商品圖片：</p>
+              <label class="upload_cover img_update">
+                <input id="upload_input" class="upload_input" type="file"
+                  onchange="img_Upload(this.files ,'upload_img' , 'upload_input')" />
+                <img id="upload_img" src="">
+                <span class="upload_icon">➕</span>
+                <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+              </label>
+              <label class="upload_cover img_update">
+                <input id="upload_input1" class="upload_input" type="file"
+                  onchange="img_Upload(this.files ,'upload_img1','upload_input1')" />
+                <img id="upload_img1" src="">
+                <span class="upload_icon">➕</span>
+                <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+              </label>
+              <label class="upload_cover img_update">
+                <input id="upload_input2" class="upload_input" type="file"
+                  onchange="img_Upload(this.files ,'upload_img2','upload_input2')" />
+                <img id="upload_img2" src="">
+                <span class="upload_icon">➕</span>
+                <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+              </label>
+            </div>
+            <div class="signclose">
+              <img src="./img/close.png" width="20px" height="20px" onclick="signclose()" />
+            </div>
+            <div class="postdiv"><button onclick="Create_Commodity()">送出</button></div>
+          </div>
+        </div>
+        <div id="goods_tit">
+          <div class="betab">
+            <div class="betablink" onclick="openbetab(event, 'detail'),GetCommodities(),change_root('商品管理','商品資訊')">
+              商品資訊
+            </div>
+            <div class="betablink" onclick="openbetab(event, 'price'),GetCommodities(),change_root('商品管理','數量和價格')">
+              數量和價格
+            </div>
+            <div class="betablink" onclick="openbetab(event, 'format'),GetCommodities(),change_root('商品管理','商品規格')">
+              商品規格
+            </div>
+          </div>
+          <div style="width: 100%; background-color: #ffffff">
+            <!-- 商品資訊 -->
+            <div id="detail" class="betab_content">
+              <div style="
+                    display: flex;
+                    height: 65px;
+                    align-items: center;
+                    width: 100%;
+                  ">
+                <div style="display: flex;">
+                  <input type="search" id="phonesear" placeholder="搜尋商品編號" width="100px" />
+                </div>
+                <div style="display: flex; width: 59%">
+                  <input type="search" id="three" placeholder="(末三碼)" />
+                  <button class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+                <div class="show_area">
+                  <p class="show">顯示</p>
+                  <select style="height: 30px; margin-right: 10px">
+                    <option>30筆</option>
+                    <option>15筆</option>
+                    <option>45筆</option>
+                  </select>
+                  <button class="body_btn">更多篩選設定</button>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 14%; color: #919699; line-height: 10px">
+                  商品資訊
+                </p>
+                <p style="width: 14%; color: #919699">商品編號</p>
+                <p style="width: 14%; color: #919699">商品名稱</p>
+                <p style="width: 14%; color: #919699">價錢</p>
+                <p style="width: 14%; color: #919699">庫存</p>
+                <p style="width: 14%; color: #919699">上架</p>
+                <p style="width: 14%; color: #919699">刪除</p>
+              </div>
+
+              <div id="Commodity_lists"></div>
+
+            </div>
+            <!-- 數量價錢 -->
+            <div id="price" class="betab_content">
+              <div style="display: flex; align-items: center; width: 100%">
+                <div style="display: flex;">
+                  <input type="search" id="phonesear" placeholder="搜尋商品編號" width="100px" />
+                </div>
+                <div style="display: flex; width: 59%">
+                  <input type="search" id="three" placeholder="(末三碼)" />
+                  <button class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+                <div class="show_area">
+                  <p class="show">顯示</p>
+                  <select style="height: 30px; margin-right: 10px">
+                    <option>30筆</option>
+                    <option>15筆</option>
+                    <option>45筆</option>
+                  </select>
+                  <button class="body_btn">更多篩選設定</button>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 33%; color: #919699; line-height: 10px">
+                  商品編號
+                </p>
+                <p style="width: 33%; color: #919699">原價格</p>
+                <p style="width: 33%; color: #919699">特價</p>
+                <p style="width: 33%; color: #919699">庫存數量</p>
+              </div>
+              <div id="PriceLists"></div>
+            </div>
+            <!-- 規格 -->
+            <div id="format" class="betab_content">
+              <div style="display: flex; align-items: center; width: 100%">
+                <div style="display: flex;">
+                  <input type="search" id="phonesear" placeholder="搜尋商品編號" width="100px" />
+                </div>
+                <div style="display: flex; width: 59%">
+                  <input type="search" id="three" placeholder="(末三碼)" />
+                  <button class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+                <div class="show_area">
+                  <p class="show">顯示</p>
+                  <select style="height: 30px; margin-right: 10px">
+                    <option>30筆</option>
+                    <option>15筆</option>
+                    <option>45筆</option>
+                  </select>
+                  <button class="body_btn">更多篩選設定</button>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 16%; color: #919699; line-height: 10px">
+                  商品編號
+                </p>
+                <p style="width: 16%; color: #919699">商品名稱</p>
+                <p style="width: 16%; color: #919699">類別</p>
+                <p style="width: 16%; color: #919699">尺寸</p>
+                <p style="width: 16%; color: #919699">顏色</p>
+                <p style="width: 16%; color: #919699">自訂</p>
+              </div>
+
+              <div id="InfoLists"></div>
+
+              <div id="update">
+                <div style="width: 80%">
+                  <p>按下「增加」或「更新」儲存您的設定。</p>
+                </div>
+                <div style="width: 10%">
+                  <button class="body_btn">上架</button>
+                </div>
+                <div style="width: 10%">
+                  <button class="body_btn">增加</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- user -->
+    <div id="user" class="tabcontent">
+      <div id="body_right">
+        <div style="display: flex; align-items: center">
+          <p style="
+                font-size: 30px;
+                font-weight: bolder;
+                margin: 20px 0px;
+                width: 92%;">
+            顧客管理
+          </p>
+        </div>
+        <div id="goods_tit">
+          <div class="custab">
+            <div class="betablink" onclick="openbetab(event, 'news'),change_root('顧客管理','顧客資訊')">
+              顧客資訊
+            </div>
+            <!-- <div class="betablink" onclick="openbetab(event, 'order')">
+              過往訂單
+            </div> -->
+          </div>
+          <div style="width: 100%; background-color: #ffffff">
+            <!-- 商品資訊 -->
+            <div id="news" class="betab_content">
+              <div style="
+                    display: flex;
+                    height: 65px;
+                    align-items: center;
+                    width: 100%;
+                  ">
+                <div style="display: flex;">
+                  <input type="search" id="phonesear" placeholder="搜尋顧客ID" width="100px" />
+                </div>
+                <div style="display: flex; width: 59%">
+                  <input type="search" id="three" placeholder="(末三碼)" />
+                  <button class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+                <div class="show_area">
+                  <p class="show" style="white-space: nowrap">顯示</p>
+                  <select style="height: 30px; margin-right: 10px">
+                    <option>30筆</option>
+                    <option>15筆</option>
+                    <option>45筆</option>
+                  </select>
+                  <button class="body_btn" style="white-space: nowrap">
+                    更多篩選設定
+                  </button>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 20%; color: #919699">顧客ID</p>
+                <p style="width: 20%; color: #919699">姓名</p>
+                <p style="width: 20%; color: #919699">電子郵件</p>
+                <p style="width: 20%; color: #919699">已是會員</p>
+                <p style="width: 20%; color: #919699">註冊時長</p>
+              </div>
+              <div id="Memberslist">
+
+              </div>
+              <div style="width: 100%; background-color: #ffffff">
+                <!-- 商品資訊 -->
+                <div id="order" class="betab_content">
+                  <div style="
+                      display: flex;
+                      height: 65px;
+                      align-items: center;
+                      width: 100%;
+                    ">
+                    <div style="display: flex;">
+                      <input type="search" id="phonesear" placeholder="搜尋顧客ID" width="100px" />
+                    </div>
+                    <div style="display: flex; width: 59%">
+                      <input type="search" id="three" placeholder="(末三碼)" />
+                      <button class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </div>
+                    <div class="show_area">
+                      <p class="show" style="white-space: nowrap">顯示</p>
+                      <select style="height: 30px; margin-right: 10px">
+                        <option>30筆</option>
+                        <option>15筆</option>
+                        <option>45筆</option>
+                      </select>
+                      <button class="body_btn" style="white-space: nowrap">
+                        更多篩選設定
+                      </button>
+                    </div>
+                  </div>
+                  <div style="
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      text-align: center;
+                      border: #e3e5e5 1px solid;
+                    ">
+                    <p style="width: 25%; color: #919699; line-height: 10px">
+                      訂單編號
+                    </p>
+                    <p style="width: 25%; color: #919699">訂單日期</p>
+                    <p style="width: 25%; color: #919699">合計</p>
+                    <p style="width: 25%; color: #919699">訂單狀態</p>
+                  </div>
+                  <div style="
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      text-align: center;
+                      border: #e3e5e5 1px solid;
+                    ">
+                    <p style="width: 25%">25210416064438067</p>
+                    <p style="width: 25%">2521-04-28</p>
+                    <p style="width: 25%">NT$1,190</p>
+                    <p style="width: 25%">已完成</p>
+                    <!-- <div style="width: 16%; display: flex; justify-content: center">
+                      <button style="margin: 5px" class="body_btn">上架</button>
+                      <button style="margin: 5px" class="body_btn">下架</button>
+                    </div> -->
+                  </div>
+                  <div style="
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      text-align: center;
+                      border: #e3e5e5 1px solid;
+                    ">
+                    <p style="width: 25%">25210416064438067</p>
+                    <p style="width: 25%">2521-04-28</p>
+                    <p style="width: 25%">NT$1,190</p>
+                    <p style="width: 25%">已完成</p>
+                    <!-- <div style="width: 16%; display: flex; justify-content: center">
+                    <button style="margin: 5px" class="body_btn">上架</button>
+                    <button style="margin: 5px" class="body_btn">下架</button>
+                  </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 訂單管理 -->
+    <div id="paper" class="tabcontent">
+      <div id="body_right">
+        <div>
+          <p style="font-size: 30px; font-weight: bolder; margin: 20px 0px">
+            訂單管理
+          </p>
+        </div>
+        <div id="goods_tit">
+          <div id="goodsti_li">
+            <!-- <div style="position: absolute; right: 0">
+              <button class="body_btn">新增訂單(手動)</button>
+            </div> -->
+          </div>
+          <div class="patab">
+            <div class="patablink" onclick="openpatab(event, 'all'),change_root('訂單管理','全部')">
+              全部
+            </div>
+            <div class="patablink" onclick="openpatab(event, 'load'),change_root('訂單管理','訂單處理中')">
+              訂單處理中
+            </div>
+            <div class="patablink" onclick="openpatab(event, 'pay'),change_root('訂單管理','未付款')">
+              未付款
+            </div>
+            <div class="patablink" onclick="openpatab(event, 'replay'),change_root('訂單管理','訂單狀態')">
+              訂單狀態
+            </div>
+          </div>
+          <div id="all" class="patab_content">
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+                  line-height: 40px;
+                ">
+              <div style="display: flex; width: 75%">
+                <input type="search" id="three" placeholder="搜尋訂單編號" />
+                <button class="search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="show_area">
+                <p class="show">顯示</p>
+                <select style="height: 30px; margin-right: 20px">
+                  <option>30筆</option>
+                  <option>15筆</option>
+                  <option>45筆</option>
+                </select>
+                <button class="body_btn">更多篩選設定</button>
+              </div>
+            </div>
+            <div style="width: 100%;display: flex;align-items: center;text-align: center;border: #e3e5e5 1px solid;">
+              <p style="width: 20%; color: #919699;line-height: 10px;">訂單編號</p>
+              <p style="width: 20%; color: #919699">訂單日期</p>
+              <p style="width: 20%; color: #919699">價錢</p>
+              <p style="width: 20%; color: #919699">訂單狀態</p>
+              <p style="width: 20%; color: #919699">地址</p>
+            </div>
+            <div id="Sales_All"></div>
+          </div>
+          <div id="load" class="patab_content">
+            <div style="display: flex; align-items: center; width: 100%">
+              <div style="display: flex;">
+                <input type="search" id="phonesear" placeholder="搜尋訂單編號" width="100px" />
+              </div>
+              <div style="display: flex; width: 59%">
+                <input type="search" id="three" placeholder="(末三碼)" />
+                <button class="search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="show_area">
+                <p class="show">顯示</p>
+                <select style="height: 30px; margin-right: 10px">
+                  <option>30筆</option>
+                  <option>15筆</option>
+                  <option>45筆</option>
+                </select>
+                <button class="body_btn">更多篩選設定</button>
+              </div>
+            </div>
+            <div style="
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  border: #e3e5e5 1px solid;
+                ">
+              <p style="width: 50%; color: #919699">訂單編號</p>
+              <p style="width: 50%; color: #919699">日期</p>
+              <p style="width: 50%; color: #919699">訂單狀態</p>
+            </div>
+
+            <div id="Sales_Prepare"></div>
+          </div>
+          <div id="pay" class="patab_content">
+            <div style="display: flex; align-items: center; width: 100%">
+              <div style="display: flex;">
+                <input type="search" id="phonesear" placeholder="搜尋訂單編號" width="100px" />
+              </div>
+              <div style="display: flex; width: 59%">
+                <input type="search" id="three" placeholder="(末三碼)" />
+                <button class="search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="show_area">
+                <p class="show">顯示</p>
+                <select style="height: 30px; margin-right: 10px">
+                  <option>30筆</option>
+                  <option>15筆</option>
+                  <option>45筆</option>
+                </select>
+                <button class="body_btn">更多篩選設定</button>
+              </div>
+            </div>
+            <div style="
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  border: #e3e5e5 1px solid;
+                ">
+              <p style="
+                    width: 33%;
+
+                    color: #919699;
+                    line-height: 10px;
+                  ">
+                訂單編號
+              </p>
+              <p style="width: 33%; color: #919699">訂單日期</p>
+              <p style="width: 33%; color: #919699">價錢</p>
+              <p style="width: 33%; color: #919699">狀態</p>
+            </div>
+            <div id="Sales_UnPay"></div>
+          </div>
+          <div id="replay" class="patab_content">
+            <div style="display: flex; align-items: center; width: 100%">
+              <div style="display: flex;">
+                <input type="search" id="phonesear" placeholder="搜尋訂單編號" width="100px" />
+              </div>
+              <div style="display: flex; width: 59%">
+                <input type="search" id="three" placeholder="(末三碼)" />
+                <button class="search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="show_area">
+                <p class="show">顯示</p>
+                <select style="height: 30px; margin-right: 10px">
+                  <option>30筆</option>
+                  <option>15筆</option>
+                  <option>45筆</option>
+                </select>
+                <button class="body_btn">更多篩選設定</button>
+              </div>
+            </div>
+            <div style="
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  text-align: center;
+                  border: #e3e5e5 1px solid;
+                ">
+              <p style="width: 50%; color: #919699">訂單編號</p>
+              <p style="width: 50%; color: #919699">訂單狀態</p>
+            </div>
+            <div id="Sales_Colls"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 文章管理 -->
+    <div id="edit" class="tabcontent">
+      <div id="body_right">
+        <div style="display: flex; align-items: center">
+          <p style="
+                font-size: 30px;
+                font-weight: bolder;
+                margin: 20px 0px;
+                width: 92%;
+              ">
+            文章管理
+          </p>
+          <input type="button" onclick="javascript:location.href='qp.html'" value="新增文章" style="display:none;height: 40px;white-space:nowrap;line-height: 30px;
+                background-color: #1EA4EE;
+                border: none;
+                color: #ffffff;
+                padding: 5px 15px;
+                border-radius: 10px;"></input>
+        </div>
+        <div id="goods_tit">
+          <div class="custab">
+            <div class="betablink" onclick="openbetab(event, 'det'),change_root('文章管理','文章資料')">
+              文章資料
+            </div>
+          </div>
+          <div style="width: 100%; background-color: #ffffff">
+            <!-- 商品資訊 -->
+            <div id="det" class="betab_content">
+              <div style="
+                    display: flex;
+                    height: 65px;
+                    align-items: center;
+                    width: 100%;
+                  ">
+                <div style="display: flex;">
+                  <input type="search" id="phonesear" placeholder="搜尋文章" width="100px" />
+                </div>
+                <div style="display: flex; width: 59%">
+                  <input type="search" id="three" placeholder="(末三碼)" />
+                  <button class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+                <div class="show_area">
+                  <p class="show" style="white-space:nowrap;">顯示</p>
+                  <select style="height: 30px; margin-right: 10px">
+                    <option>30筆</option>
+                    <option>15筆</option>
+                    <option>45筆</option>
+                  </select>
+                  <button class="body_btn" style="white-space:nowrap;">更多篩選設定</button>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 20%; color: #919699">內容標題</p>
+                <p style="width: 20%; color: #919699">作者</p>
+                <p style="width: 20%; color: #919699">分類</p>
+                <p style="width: 20%; color: #919699">標題</p>
+                <p style="width: 20%; color: #919699">日期</p>
+              </div>
+              <div style="width: 100%;display: flex;align-items: center;text-align: center;border: #e3e5e5 1px solid;">
+                <p style="width: 20%;">今日OOTD</p>
+                <p style="width: 20%;">李欣娜</p>
+                <p style="width: 20%;">上衣</p>
+                <p style="width: 20%;">休閒</p>
+                <p style="width: 20%;">2022-05-01</p>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 20%;">今日OOTD</p>
+                <p style="width: 20%;">李欣娜</p>
+                <p style="width: 20%;">上衣</p>
+                <p style="width: 20%;">休閒</p>
+                <p style="width: 20%;">2022-05-01</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 優惠券管理 -->
+    <div id="ticket" class="tabcontent">
+      <div id="body_right">
+        <div style="display: flex; align-items: center">
+          <p style="
+                font-size: 30px;
+                font-weight: bolder;
+                margin: 20px 0px;
+                width: 92%;
+              ">
+            優惠卷管理
+          </p>
+        </div>
+        <div id="goods_tit">
+          <div class="ticktab">
+            <div class="betablink" onclick="openbetab(event, 'key'),change_root('優惠卷管理','優惠券資料')">
+              優惠券資料
+            </div>
+          </div>
+          <div style="width: 100%; background-color: #ffffff">
+            <!-- 商品資訊 -->
+            <div id="key" class="betab_content">
+              <div style="
+                    display: flex;
+                    height: 65px;
+                    align-items: center;
+                    width: 100%;
+                  ">
+                <div style="display: flex;">
+                  <input type="search" id="phonesear" placeholder="搜尋顧客ID" width="100px" />
+                </div>
+                <div style="display: flex; width: 59%">
+                  <input type="search" id="three" placeholder="(末三碼)" />
+                  <button class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+                <div class="show_area">
+                  <p class="show" style="white-space:nowrap;">顯示</p>
+                  <select style="height: 30px; margin-right: 10px">
+                    <option>30筆</option>
+                    <option>15筆</option>
+                    <option>45筆</option>
+                  </select>
+                  <button class="body_btn" style="white-space:nowrap;">更多篩選設定</button>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 14%; color: #919699">No.</p>
+                <p style="width: 14%; color: #919699">方案名稱</p>
+                <p style="width: 24%; color: #919699">有效時段</p>
+                <p style="width: 24%; color: #919699">狀態</p>
+                <p style="width: 24%; color: #919699">操作</p>
+              </div>
+              <div id="coupon_lists">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 數據分析 -->
+    <div id="dashboard" class="tabcontent">
+      <div id="body_right">
+        <div>
+          <p style="font-size: 30px; font-weight: bolder; margin: 20px 0px">
+            數據分析
+          </p>
+        </div>
+      </div>
+      <div style="display: flex">
+        <div style="
+              background-color: #f7f9fa;
+              width: 25%;
+              margin: 5px;
+              line-height: 50px;
+              border-radius: 25px;
+              padding: 10px;
+            ">
+          <p class="dash_tit">本周商店瀏覽量</p>
+          <span style="color: #ea3d2f">
+            <h1>1,254</h1>
+          </span>
+        </div>
+        <div style="
+              background-color: #f7f9fa;
+              width: 25%;
+              margin: 5px;
+              line-height: 50px;
+              border-radius: 25px;
+              padding: 10px;
+            ">
+          <p class="dash_tit">成交訂單數</p>
+          <span style="color: #367bf5">
+            <h1>829</h1>
+          </span>
+        </div>
+        <div style="
+              background-color: #f7f9fa;
+              width: 25%;
+              margin: 5px;
+              line-height: 50px;
+              border-radius: 25px;
+              padding: 10px;
+            ">
+          <p class="dash_tit">未出貨訂單數</p>
+          <span style="color: #2fa84f">
+            <h1>114</h1>
+          </span>
+        </div>
+        <div style="
+              background-color: #f7f9fa;
+              width: 25%;
+              margin: 5px;
+              line-height: 50px;
+              border-radius: 25px;
+              padding: 10px;
+            ">
+          <p class="dash_tit">未付款訂單數</p>
+          <span style="color: #f3aa18">
+            <h1>27</h1>
+          </span>
+        </div>
+      </div>
+      <div>
+        <div style="width: 100%; display: flex; border-bottom: #e3e5e5 1px solid">
+          <p style="width: 70%; text-align: left; color: #919699">熱門文章</p>
+          <p style="width: 10%; text-align: right; color: #919699">瀏覽</p>
+          <p style="width: 10%; text-align: right; color: #919699">按讚數</p>
+          <p style="width: 10%; text-align: right; color: #919699">討論</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            衣服品項
+          </p>
+          <p style="width: 10%; text-align: right">92</p>
+          <p style="width: 10%; text-align: right">8</p>
+          <p style="width: 10%; text-align: right">1</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            Social Networks traffic
+          </p>
+          <p style="width: 10%; text-align: right">31</p>
+          <p style="width: 10%; text-align: right">11</p>
+          <p style="width: 10%; text-align: right">0</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            Visitors from video sources
+          </p>
+          <p style="width: 10%; text-align: right">256</p>
+          <p style="width: 10%; text-align: right">32</p>
+          <p style="width: 10%; text-align: right">4</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            Other Referrers
+          </p>
+          <p style="width: 10%; text-align: right">697</p>
+          <p style="width: 10%; text-align: right">40</p>
+          <p style="width: 10%; text-align: right">22</p>
+        </div>
+      </div>
+      <!-- <div>
+        <div style="width: 100%; display: flex; border-bottom: #e3e5e5 1px solid">
+          <p style="width: 70%; text-align: left; color: #919699">
+            本周熱門排行
+          </p>
+          <p style="width: 10%; text-align: right; color: #919699">瀏覽</p>
+          <p style="width: 10%; text-align: right; color: #919699">按讚數</p>
+          <p style="width: 10%; text-align: right; color: #919699">討論</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            衣服品項
+          </p>
+          <p style="width: 10%; text-align: right">92</p>
+          <p style="width: 10%; text-align: right">8</p>
+          <p style="width: 10%; text-align: right">1</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            Social Networks traffic
+          </p>
+          <p style="width: 10%; text-align: right">31</p>
+          <p style="width: 10%; text-align: right">11</p>
+          <p style="width: 10%; text-align: right">0</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            Visitors from video sources
+          </p>
+          <p style="width: 10%; text-align: right">256</p>
+          <p style="width: 10%; text-align: right">32</p>
+          <p style="width: 10%; text-align: right">4</p>
+        </div>
+        <div style="width: 100%; display: flex">
+          <p style="width: 70%; text-align: left; font-weight: bold">
+            Other Referrers
+          </p>
+          <p style="width: 10%; text-align: right">697</p>
+          <p style="width: 10%; text-align: right">40</p>
+          <p style="width: 10%; text-align: right">22</p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- js -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/api.js"></script>
+  <script type="text/javascript" src="js/test.js"></script>
+  <script type="text/javascript" src="js/tryy.js"></script>
+</body>
+
+</html>

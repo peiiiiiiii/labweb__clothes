@@ -1,0 +1,154 @@
+*{
+    // border: solid 1px;
+}
+
+.main__wrapper{
+    margin-bottom: 18rem;
+    margin-top: 18rem;
+    
+    @include respond(phone) {
+        margin-bottom: 10rem;
+        margin-top: 10rem;
+    }
+}
+
+
+.login__wrapper{
+    *{
+        // border: solid 1px;
+    }
+    padding: 0 10rem;
+    width: 100%;
+    margin: 0 auto;
+    @include displayflex(flex-start, center);
+    color: $color-black;
+    @include respond(tab-port) {
+        padding: 0 6rem;
+    }
+    @include respond(phone) {
+        padding: 0 3rem;
+        flex-direction: column;
+        @include displayflex(center, center);
+    }
+    .login__left{
+        width: 50%;
+        margin-right: 4rem;
+        font-size: $default-font-size;
+        @include respond(phone) {
+            width: 100%;
+            margin-right: 0rem;
+        }
+        &-title{
+            font-size: $xl-font-size;
+            font-weight: 700;
+        }
+
+        .form-row{
+            margin: 2.4rem 0 ;
+
+            label{
+                display: block;
+                margin-bottom: 1rem;
+            }
+            input{
+                
+            }
+            
+            &__input {
+                display: block;
+                width: 100%;
+                height: 3.6rem;
+                padding: .4rem 0.2rem;
+                border-bottom: solid .1rem $color-black;
+                margin-bottom: 1.4rem;
+                transition: all .3s;
+        
+                // @include respond(tab-port) {
+                //     width: 100%;
+                // }
+        
+                &:focus {
+                    outline: none;
+                    border-bottom: solid .1rem $color-black;
+                }
+        
+                &:focus:invalid {
+                    border-bottom: .1rem solid $color-red;
+                }
+                &::-webkit-input-placeholder {
+                    color: $color-grey-dark-2;
+                }
+            }
+        
+        
+            &__label {
+                font-size: 1.2rem;
+                font-weight: 700;
+                display: block;
+                transition: all .3s;
+                
+            }
+        
+            &__input:invalid + &__label {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-4rem);
+            }
+            
+        }
+        .account__btn{
+            width: 18rem;
+
+            &-box{
+
+
+                
+            }
+        }
+    }
+    .login__right{
+        width: 50%;
+        font-size: $default-font-size;
+        padding-left: 9rem;
+        @include respond(tab-port) {
+            padding-left: 5rem;
+        }
+        @include respond(phone) {
+            width: 100%;
+            margin-top: 4rem;
+            padding-left: 0rem;
+        }
+        *{
+            // border: solid 1px;
+        }
+
+        &__container{
+
+        }
+        &__content{
+
+        }
+        &__wrapper{
+            h4{
+                margin-bottom: 2.6rem;
+                font-weight: 700;
+            }
+            *{
+                margin-bottom: .6rem;
+            }
+            ul li {
+                cursor:auto !important;
+            }
+            a{
+                margin-top: $xsmall-font-size;
+                font-size:1rem;
+                text-align: center;
+                background-color: $color-black;
+                width: 12rem;
+                color: $color-white;
+                padding: .8rem 2rem;
+                display: inline-block;
+            }
+        }
+    }
+}

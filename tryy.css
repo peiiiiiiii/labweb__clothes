@@ -1,0 +1,224 @@
+/* #displaysign{
+    position: relative;
+    top: 80px;
+    width: 70px;
+    height: 40px;
+} */
+.signform {
+    font-family: 微软雅黑;
+    position: fixed;
+    background-color: #fdfcdc;
+    top: 3%;
+    left: 25%;
+    width: 50%;
+    margin: auto;
+    /* height: 85%; */
+    border-radius: 1em;
+    text-align: center;
+    z-index: 999;
+    padding: 15px;
+}
+#registerform {
+    height: 450px;
+}
+.signclose {
+    cursor: pointer;
+    float: right;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    /* height: 35px; */
+    width: 35px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/* #registerloading{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 410px;
+    top: 90px;
+} */
+.signinput {
+    text-align: center;
+    border-radius: 0.2em;
+    width: 280px;
+    height: 45px;
+    border: none;
+    background-color:#ffffff;
+    font-size: 28px;
+}
+.signinput::-webkit-input-placeholder {
+    font-size: 26px;
+}
+.userdiv {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+}
+.pwddiv {
+    position: relative;
+    margin-top: 20px;
+}
+.postdiv {
+    position: relative;
+    margin-top: 20px;
+}
+.postdiv button {
+    cursor: pointer;
+    color: white;
+    font-size: 26px;
+    border: none;
+    border-radius: 0.4em;
+    width: 280px;
+    height: 45px;
+    background-color:#4CAF50;
+}
+/* 滑動按鈕 */
+.switch_demo {
+    line-height: 0px;
+    margin: 10px;
+    position: relative;
+    width: 150px;
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; */
+    }
+    .switch_demo-checkbox {
+    display: none;
+    }
+    .switch_demo-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    }
+    .switch_demo-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    }
+    .switch_demo-inner:before,
+    .switch_demo-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    }
+    .switch_demo-inner:before {
+    content: "上架";
+    text-align: left;
+    padding-left: 10px;
+    background-color: #1EA4EE;
+    color: #FFFFFF;
+    }
+    .switch_demo-inner:after {
+    content: "下架";
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+    }
+    .switch_demo-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 116px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+    }
+    .switch_demo-checkbox:checked + .switch_demo-label .switch_demo-inner {
+    margin-left: 0;
+    }
+    .switch_demo-checkbox:checked + .switch_demo-label .switch_demo-switch {
+    right: 0px;
+    }
+    
+    /* ss */
+    .switch {
+        position: relative;
+        width: 65px;
+        height: 30px;
+        line-height: 30px;
+      }
+      .switch-checkbox {
+        display: none;
+      }
+      
+      .switch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      
+      .switch-txt {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+      }
+      
+      .switch-txt::before,
+      .switch-txt::after {
+        display: block;
+        float: right;
+        width: 50%;
+        font-size: 13px;
+        color: #fff;
+        font-weight: bold;
+        box-sizing: border-box;
+        text-align: left;
+      }
+      
+      .switch-txt::after {
+        content: attr(turnOn);
+        padding-left: 10px;
+        background: #1ba0ef;
+        color: #fff;
+      }
+      
+      .switch-txt::before {
+        content: attr(turnOff);
+        padding-right: 10px;
+        background: #eee;
+        color: #ccc;
+        text-align: right;
+
+      }
+      
+      .switch-Round-btn {
+        position: absolute;
+        display: block;
+        width: 26px;
+        height: 26px;
+        margin: 2px;
+        background: #fff;
+        top: 0;
+        bottom: 0;
+        right: 35px;
+        border-radius: 13px;
+        transition: all 0.3s ease-in 0s;
+      }
+      
+      .switch-checkbox:checked + .switch-label .switch-txt {
+        margin-left: 0;
+      }
+      
+      .switch-checkbox:checked + .switch-label .switch-Round-btn{
+        right: 0;
+      }
