@@ -37,7 +37,7 @@ import {getDetail} from "./fornt__api.js";
 import { getrandom4} from "./fornt__api.js";
 
 import { default as RES } from '../JSON/C.json' assert { type: 'json' };
-import { default as REAN4 } from '../JSON/REAN4.json' assert { type: 'json' };
+import { default as randomto4 } from '../JSON/random4.json' assert { type: 'json' };
 
 
 // let PRODUCTS = [];
@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const statusRandom = async() => {
       // let res = await getrandom4();
       // console.log(res);
-      showProducts2(REAN4);
+      showProducts2(randomto4);
     }
 
     // status();
     // statusRandom();
     getProducts(RES);
-    showProducts2(REAN4);
+    showProducts2(randomto4);
 
     CART.init();
     
