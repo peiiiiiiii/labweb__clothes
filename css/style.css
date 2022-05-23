@@ -2033,6 +2033,15 @@ body {
       min-width: 70vh;
       padding: 0 5vw;
       color: #fff; }
+<<<<<<< Updated upstream
+=======
+      @media only screen and (max-width: 75em) {
+        .home__main .pin-wrap > * {
+          min-width: 60vh; } }
+      @media only screen and (max-width: 37.5em) {
+        .home__main .pin-wrap > * {
+          min-width: 40vh; } }
+>>>>>>> Stashed changes
     .home__main .pin-wrap .item__list-name {
       color: #fff; }
     .home__main .pin-wrap .item__state {
@@ -2043,16 +2052,32 @@ body {
     min-height: 65vh !important;
     padding: 5rem 0rem !important; }
   .home__main #section_one__wrapper {
+<<<<<<< Updated upstream
     padding: 0rem 0rem 5rem 0rem !important; }
     @media only screen and (max-width: 56.25em) {
       .home__main #section_one__wrapper {
         min-height: 60vh; } }
+=======
+    padding: 0rem 0rem 5rem 0rem !important;
+    min-height: 50vh !important; }
+    @media only screen and (max-width: 56.25em) {
+      .home__main #section_one__wrapper {
+        min-height: 60vh !important; } }
+    @media only screen and (max-width: 37.5em) {
+      .home__main #section_one__wrapper {
+        min-height: 40vh !important; } }
+>>>>>>> Stashed changes
   .home__main .section_one__wrapper {
     width: 100%;
     height: 100%;
     display: flex;
+<<<<<<< Updated upstream
     justify-content: space-between;
     min-height: 90vh;
+=======
+    min-height: 50vh !important;
+    justify-content: space-between;
+>>>>>>> Stashed changes
     position: relative; }
     @media only screen and (max-width: 56.25em) {
       .home__main .section_one__wrapper {
@@ -2387,6 +2412,15 @@ html {
     position: relative;
     z-index: 1;
     margin-right: 4rem; }
+<<<<<<< Updated upstream
+=======
+    .item__wrapper-left #lens {
+      background-color: rgba(233, 233, 233, 0.4); }
+    .item__wrapper-left #lens, .item__wrapper-left #result {
+      position: absolute;
+      display: none;
+      z-index: 1; }
+>>>>>>> Stashed changes
     @media only screen and (max-width: 50.25em) {
       .item__wrapper-left {
         width: 100%;
@@ -2681,6 +2715,32 @@ html {
   @media only screen and (max-width: 56.25em) {
     .section-book {
       padding: 10rem 0; } }
+
+#lens {
+  background-color: rgba(233, 233, 233, 0.4); }
+
+#lens, #result {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  display: none;
+  z-index: 1; }
+
+.img-zoom-container {
+  position: relative; }
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px; }
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px; }
 
 .main__wrapper {
   margin-bottom: 18rem;
