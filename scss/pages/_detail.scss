@@ -48,6 +48,11 @@ html{
         position: relative;
         z-index: 1;
         margin-right: 4rem;
+<<<<<<< Updated upstream
+=======
+        #lens { background-color: rgba( 233, 233, 233, 0.4 ) }
+        #lens, #result { position: absolute; display: none; z-index: 1; }
+>>>>>>> Stashed changes
         @include respond(tab-normal) {
             width: 100%;
             margin: 0 auto;
@@ -109,6 +114,7 @@ html{
             justify-content: center;
             position: relative;
             border-radius: 2px;
+<<<<<<< Updated upstream
 
             
           }
@@ -155,6 +161,54 @@ html{
 
         .product__gallery{
             
+=======
+
+            
+          }
+          
+          
+          
+          .control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3rem;
+            height: 3rem;
+            background: #fff;
+            border-radius: 50px;
+            margin-top: -20px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+          }
+          
+          .prev,
+          .next {
+            background-size: 1.4rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+          }
+          
+          .prev {
+            background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+            left: 10px;
+          }
+          
+          .next {
+            background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+            right: 10px;
+          }
+          
+          .prev:active,
+          .next:active {
+            // transform: scale(0.9);
+          }
+
+        
+
+        .product__gallery{
+            
+>>>>>>> Stashed changes
             // flex: 1 1 15rem;
             display: none;
             &-item{
@@ -601,3 +655,33 @@ html{
         padding: 10rem 0;
     }
 }
+
+#lens { background-color: rgba( 233, 233, 233, 0.4 ) }
+#lens, #result {
+     position: absolute; 
+     right: 0;
+     top: 10%;
+     display: none;
+      z-index: 1;
+
+ }
+
+
+.img-zoom-container {
+    position: relative;
+  }
+  
+  .img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 40px;
+    height: 40px;
+  }
+  
+  .img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 300px;
+    height: 300px;
+  }

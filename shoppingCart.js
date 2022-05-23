@@ -15,11 +15,6 @@ const CART = {
         let _cart = JSON.stringify(CART.contents);
         await localStorage.setItem(CART.KEY, _cart);
         await CART.count__cart();
-<<<<<<< Updated upstream
-=======
-        await CART.singleSync();
-        
->>>>>>> Stashed changes
         // retrun 
         // let pust = {
         //     commodityID: PRODUCTS.CommodityId,
@@ -29,14 +24,6 @@ const CART = {
         // };
 
     },
-<<<<<<< Updated upstream
-=======
-    async singleSync(){
-        console.log(CART.contents);
-        // let res = await addCart(CART.contents);
-        // console.log(res);
-    },
->>>>>>> Stashed changes
     async count__cart(){
         let count_s = JSON.parse(localStorage.getItem("shopping cart"))
         if(count_s){
@@ -126,11 +113,7 @@ const CART = {
             return item;
         });
         
-<<<<<<< Updated upstream
         CART.sync()
-=======
-        CART.sync(id);
->>>>>>> Stashed changes
     },
     reduce(id, qty=1, color,size){
         
@@ -330,11 +313,7 @@ export function showCart(){
     
 }
 
-<<<<<<< Updated upstream
 export function showProducts( product ){
-=======
-export async function showProducts( product ){
->>>>>>> Stashed changes
     // console.log("p",product)
     console.log(product);
     // console.log(JSON.stringify(product))
@@ -354,7 +333,6 @@ export async function showProducts( product ){
     let active__slider = '';
     for(let slider in sliders)
     {   
-<<<<<<< Updated upstream
         active__slider = (slider == 0) ? 'active ': '';
         slider__content += `
             <div class="slider-item ${active__slider} slide" >
@@ -363,15 +341,6 @@ export async function showProducts( product ){
         `;
     }
 
-=======
-        active__slider = (slider == 0) ? 'active': '';
-        slider__content += `
-            <div class="slider-item slide img-zoom-container" >
-                <img src=${sliders[slider]} alt="" >
-            </div>
-        `;
-    }
->>>>>>> Stashed changes
     // size
     let sizes = product.CommoditySizes;
     // console.log(sizes);
@@ -433,7 +402,6 @@ export async function showProducts( product ){
     }
     
 
-<<<<<<< Updated upstream
 
 
     let product__list = "";
@@ -453,48 +421,14 @@ export async function showProducts( product ){
                     <li class="slide-indicator"></li>
                 </ol>
                 
-=======
-{/* 
-     <ol class="slide-indicators">
-                            <li class="slide-indicator"></li>
-                            <li class="slide-indicator"></li>
-                            <li class="slide-indicator"></li>
-                            <li class="slide-indicator"></li>
-                            <li class="slide-indicator"></li>
-                        </ol>
-    <span class="slider-control-prev" role="button">
-        <img aria-hidden="true" src="img/prev.svg" alt="Previous Slide Button">
-    </span>
-    <span class="slider-control-next" role="button">
-        <img aria-hidden="true" src="img/next.svg" alt="Next Slide Button">
-    </span>*/}
-
-    let product__list = "";
-     product__list = `
-
-    <div class="item__wrapper" >
-    
-        <div class="item__wrapper-left">
-            <div id='lens'></div>
-            <div class="item__wrapper-slider slider slides" id="slides">
-                ${slider__content}
-               
->>>>>>> Stashed changes
             </div>
             <span class="slider-control-prev control prev" role="button" id="prev">
                     
             </span>
             <span class="slider-control-next control next" role="button" id="next">
                 
-<<<<<<< Updated upstream
             </span>
         </div>
-=======
-            </span> 
-            
-        </div>
-        <div id='result' class="img-zoom-result"></div>
->>>>>>> Stashed changes
         <div class="item__wrapper-right">
             <div class="item__wrapper-list">
                 <h3 class="item__wrapper-title u-margin-bottom-small">${product.CommodityName}</h3>
@@ -599,24 +533,12 @@ export async function showProducts( product ){
                 </div>
             </div>
         </div>
-<<<<<<< Updated upstream
 
     
     </div>
     `;
     productSection.insertAdjacentHTML('afterbegin',product__list);
 
-=======
-        
-    
-    </div>
-    `;
-    // console.log(productSection);
-    productSection.innerHTML = " ";
-    // console.log(productSection);
-    productSection.insertAdjacentHTML('afterbegin',product__list);
-    // console.log(productSection);
->>>>>>> Stashed changes
     // des js
     let toggle__title = document.querySelectorAll(".js-toggleClick");
     let toggle__content = document.querySelectorAll(".js-toggleClickArea");
@@ -636,16 +558,7 @@ export async function showProducts( product ){
             // console.log(toggle__content[i]);
         })
     });
-<<<<<<< Updated upstream
 
-=======
-    // console.log(productSection);
-
-    
-      
-    return "done";
-    
->>>>>>> Stashed changes
      
 }
 
@@ -732,7 +645,6 @@ function getslider0(){
     }
 }
 export default CART;
-<<<<<<< Updated upstream
 
 
 // post add cart
@@ -781,5 +693,3 @@ export default CART;
         
 //     });
 // }
-=======
->>>>>>> Stashed changes

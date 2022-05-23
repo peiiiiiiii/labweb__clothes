@@ -21,29 +21,12 @@ let update__confirm = document.getElementById("update__confirm");
 // import {showCart} from "./shoppingCart.js";
 // import {incres} from "./shoppingCart.js";
 // import {decrea} from "./shoppingCart.js";
-<<<<<<< Updated upstream
 
 document.addEventListener("DOMContentLoaded",  ()=> {
 
     profiletoken();
 
     
-=======
-import {getProfile} from "./fornt__api.js";
-import {updateprofile} from "./fornt__api.js";
-
-document.addEventListener("DOMContentLoaded",  ()=> {
-
-    
-
-    const resProfile = async() => {
-        let res = await getProfile();
-        getpro(res);
-        
-    };
-    resProfile();
-
->>>>>>> Stashed changes
     form__edit.addEventListener("click", (e)=>{
         list__account.style.display = "none";
     
@@ -73,18 +56,7 @@ document.addEventListener("DOMContentLoaded",  ()=> {
             // ,
             // password : document.getElementById("CustomerPassword").value
         }
-<<<<<<< Updated upstream
         updateprofile(params);
-=======
-        const updatestatus = async(params) => {
-            let res = await updateprofile(params);
-            if(res){
-                window.location.assign("./login.html");
-            }
-            
-        };
-        updatestatus(params);
->>>>>>> Stashed changes
 
         
         
@@ -105,13 +77,9 @@ document.addEventListener("DOMContentLoaded",  ()=> {
     });
 });
 
-<<<<<<< Updated upstream
 async function updateprofile(params) {
     let update = await makeRequest("POST", "https://localhost:7206/api/Member/update",params);
 }
-=======
-
->>>>>>> Stashed changes
 
 
 
@@ -120,15 +88,11 @@ async function updateprofile(params) {
 // // console.log(params);
 // // sign up
 
-<<<<<<< Updated upstream
 async function profiletoken() {
     let result = await makeRequest("GET", "https://localhost:7206/api/Member/getMember");
     console.log(result)
     // getpro(result[0]);
 }
-=======
-
->>>>>>> Stashed changes
 
 
 function getpro(res){
@@ -138,7 +102,6 @@ function getpro(res){
 }
 
 
-<<<<<<< Updated upstream
 function makeRequest(method, url,params) {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
@@ -182,6 +145,4 @@ function makeRequest(method, url,params) {
         
     });
 }
-=======
->>>>>>> Stashed changes
 

@@ -1,10 +1,6 @@
 let submit__btn = document.querySelector(".js-form");
 let token = null;
 // export const params = {};
-<<<<<<< Updated upstream
-=======
-import { Login } from "./fornt__api.js";
->>>>>>> Stashed changes
 
 document.addEventListener("DOMContentLoaded",  ()=> {
 
@@ -25,18 +21,7 @@ document.addEventListener("DOMContentLoaded",  ()=> {
             Birthday: document.getElementById("CustomerDate").value,
 
         }
-<<<<<<< Updated upstream
         doAjaxThings(params);
-=======
-        const status = async(params) => {
-            let res = await Login(params);
-            if(res){
-                window.location.assign("./login.html");
-            }
-            
-        };
-        status(params);
->>>>>>> Stashed changes
 
         
         

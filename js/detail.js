@@ -33,6 +33,11 @@ import {showProducts2} from "./shoppingCart.js";
 import {showCart} from "./shoppingCart.js";
 import {incres} from "./shoppingCart.js";
 import {decrea} from "./shoppingCart.js";
+<<<<<<< Updated upstream
+=======
+import {getDetail} from "./fornt__api.js";
+import { getrandom4} from "./fornt__api.js";
+>>>>>>> Stashed changes
 
 
 
@@ -40,11 +45,30 @@ import {decrea} from "./shoppingCart.js";
 // let PRODUCTS = [];
 
 document.addEventListener('DOMContentLoaded', ()=>{
+<<<<<<< Updated upstream
     
     // getProducts( showProducts, errorMessage );
     doAjaxThings(1);
     doAjaxThings(2);
     
+=======
+    const status = async() => {
+      console.log(productID);
+      let res = await getDetail(productID);
+      await getProducts(res);
+      // console.log(res);
+    }
+    const statusRandom = async() => {
+      let res = await getrandom4();
+      // console.log(res);
+      showProducts2(res);
+    }
+
+    status();
+    statusRandom();
+
+
+>>>>>>> Stashed changes
     CART.init();
     
     
@@ -54,7 +78,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
 
     
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     
 
     // plus_item.addEventListener("click" , function(ev){
@@ -80,11 +108,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
 
     
+<<<<<<< Updated upstream
+=======
+    
+>>>>>>> Stashed changes
         
     
 });
 
 
+<<<<<<< Updated upstream
 
 async function doAjaxThings(params) {
     let src= '';
@@ -99,10 +132,13 @@ async function doAjaxThings(params) {
     let result = await makeRequest("GET", src, params);
     //console.log(result);
 }
+=======
+>>>>>>> Stashed changes
 //猜你喜歡
 
 
 
+<<<<<<< Updated upstream
 // function getProducts(){
 //     const res = {
         	
@@ -126,11 +162,29 @@ function getProducts(res,params){
     
     
 
+=======
+async function getProducts(res){
+    
+    const status2 = async(res) => {
+      let ress = await showProducts(res);
+      
+    }
+    status2(res);
+    // ---------------
+>>>>>>> Stashed changes
     let slider = document.getElementById('slider'),
     sliderItems = document.getElementById('slides'),
     prev = document.getElementById('prev'),
     next = document.getElementById('next');
     slide(slider, sliderItems, prev, next);
+<<<<<<< Updated upstream
+=======
+    
+    // const slider = new Slider(
+    //   document.querySelector(".slider")
+    // );
+    
+>>>>>>> Stashed changes
     // detail add
     let mins_detail = document.querySelector(".js-detail-mins");
     let add__input = document.querySelector("#add__input");
@@ -201,6 +255,7 @@ function getProducts(res,params){
         incres();
         decrea();
     });   
+<<<<<<< Updated upstream
 
     // size
 
@@ -266,6 +321,10 @@ function makeRequest(method, url ,params) {
         };
         
     });
+=======
+    
+
+>>>>>>> Stashed changes
 }
 
 
@@ -280,6 +339,10 @@ function errorMessage(err){
 
 // slider
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 function slide(wrapper, items, prev, next) {
     let posX1 = 0,
         posX2 = 0,
@@ -295,10 +358,17 @@ function slide(wrapper, items, prev, next) {
         cloneLast = lastSlide.cloneNode(true),
         index = 0,
         allowShift = true;
+<<<<<<< Updated upstream
 
     items.appendChild(cloneFirst);
     items.insertBefore(cloneLast, firstSlide);
 
+=======
+    items.appendChild(cloneLast);
+    console.log(firstSlide)
+    items.insertBefore(cloneFirst,cloneLast);
+    firstSlide.classList.add('active');
+>>>>>>> Stashed changes
     // wrapper.classList.add('loaded');
 
     
@@ -309,13 +379,138 @@ function slide(wrapper, items, prev, next) {
   items.addEventListener('touchstart', dragStart);
   items.addEventListener('touchend', dragEnd);
   items.addEventListener('touchmove', dragAction);
+<<<<<<< Updated upstream
+=======
+
+  
+>>>>>>> Stashed changes
   
   // Click events
   prev.addEventListener('click', function () { shiftSlide(-1) });
   next.addEventListener('click', function () { shiftSlide(1) });
   
   // Transition events
+<<<<<<< Updated upstream
   items.addEventListener('transitionend', checkIndex);
+=======
+  // items.addEventListener('webkitTransitionEnd', checkIndex);
+  // items.addEventListener('transitionend', checkIndex);
+  ["transitionend", "webkitTransitionEnd", "mozTransitionEnd"].forEach(function(transition) {
+    items.addEventListener(transition, checkIndex, false);
+  });
+
+  // function handler() {
+  //   // thing
+  // }
+  
+
+  const lens = document.querySelector("#lens");
+  const resultimg = document.querySelector("#result");
+  const slideractive = document.querySelector('.slider-item.active img');
+  // document.addEventListener("mousemove", function(e){
+   
+  //   let xs = e.clientX; 
+  //   let ys = e.clientY;
+
+  //   function outerWidth(el) {
+  //     var width = el.offsetWidth;
+  //     var style = getComputedStyle(el);
+    
+  //     width += parseInt(style.marginLeft) + parseInt(style.marginRight);
+  //     return width;
+  //   }
+  //   function outerHeight(el) {
+  //     var height = el.offsetHeight;
+  //     var style = getComputedStyle(el);
+    
+  //     height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+  //     return height;
+  //   }
+    
+
+  //   let imgx1 = slideractive.offsetLeft;
+  //   let imgx2 = outerWidth(slideractive) + imgx1;
+  //   let imgy1 = slideractive.offsetTop;
+  //   let imgy2 = outerHeight(slideractive) + imgy1;
+
+  //   // console.log("x", xs);
+  //   // console.log("imgx1", imgx1);
+  //   // console.log("imgx2", imgx2);
+  //   // console.log("y", ys);
+  //   // console.log("imgy", slideractive.offsetTop);
+  //   // console.log("imgy2", imgy2);
+  //   if ( xs > imgx1 && xs < imgx2 && ys > imgy1 && ys < imgy2 ) {
+  //     lens.style.display = "block"; 
+  //     resultimg.style.display = "block"; 
+      
+  //     imageZoom( slideractive, resultimg,lens);
+  //   } else {
+  //     lens.style.display="none"; 
+  //     resultimg.style.display = "none"; 
+  //   }
+    
+  // })
+
+  function imageZoom(imgID, resultID,lens) {
+    let img, result, cx, cy;
+    img = imgID;
+    result = resultID;
+    /*create lens:*/
+    // lens = document.createElement("DIV");
+    // lens.setAttribute("class", "img-zoom-lens");
+    console.log(img.offsetWidth)
+    lens.style.width =  img.offsetWidth / 2;
+    lens.style.height = img.offsetWidth / 2;
+    /*insert lens:*/
+    // img.parentElement.insertBefore(lens, img);
+    
+    cx = result.offsetWidth / lens.offsetWidth;
+    
+    cy = result.offsetHeight / lens.offsetHeight;
+    /*set background properties for the result DIV:*/
+    result.style.backgroundImage = "url('" + img.src + "')";
+    result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+    /*execute a function when someone moves the cursor over the image, or the lens:*/
+    lens.addEventListener("mousemove", moveLens);
+    img.addEventListener("mousemove", moveLens);
+    /*and also for touch screens:*/
+    lens.addEventListener("touchmove", moveLens);
+    img.addEventListener("touchmove", moveLens);
+    function moveLens(e) {
+      var pos, x, y;
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*get the cursor's x and y positions:*/
+      pos = getCursorPos(e);
+      /*calculate the position of the lens:*/
+      x = pos.x - (lens.offsetWidth / 2);
+      y = pos.y - (lens.offsetHeight / 2);
+      /*prevent the lens from being positioned outside the image:*/
+      if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+      if (x < 0) {x = 0;}
+      if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+      if (y < 0) {y = 0;}
+      /*set the position of the lens:*/
+      lens.style.left = x + "px";
+      lens.style.top = y + "px";
+      /*display what the lens "sees":*/
+      result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+    }
+    function getCursorPos(e) {
+      var a, x = 0, y = 0;
+      e = e || window.event;
+      /*get the x and y positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x and y coordinates, relative to the image:*/
+      x = e.pageX - a.left;
+      y = e.pageY - a.top;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      y = y - window.pageYOffset;
+      return {x : x, y : y};
+    }
+  }
+>>>>>>> Stashed changes
   
   function dragStart (e) {
     e = e || window.event;
@@ -358,6 +553,7 @@ function slide(wrapper, items, prev, next) {
   }
   
   function shiftSlide(dir, action) {
+<<<<<<< Updated upstream
     items.classList.add('shifting');
     
     if (allowShift) {
@@ -370,15 +566,39 @@ function slide(wrapper, items, prev, next) {
       } else if (dir == -1) {
         items.style.left = (posInitial + slideSize) + "px";
         index--;      
+=======
+    slides[index].classList.add('active');
+    allowShift = true;
+    if (allowShift) {
+      if (!action) { posInitial = items.offsetLeft; }
+      if (dir == 1) {
+        items.style.left = (posInitial - slideSize) + "px";
+        index++; 
+        slides[index].classList.add('active');
+        slides[index-1].classList.remove('active');     
+      } else if (dir == -1) {
+        items.style.left = (posInitial + slideSize) + "px";
+        index--;   
+        slides[index].classList.add('active');
+        slides[index +1].classList.remove('active');   
+>>>>>>> Stashed changes
       }
     };
     
     allowShift = false;
+<<<<<<< Updated upstream
   }
     
   function checkIndex (){
     items.classList.remove('shifting');
     
+=======
+    checkIndex();
+  }
+    
+  function checkIndex (){
+    // slides[index-1].classList.remove('active');
+>>>>>>> Stashed changes
     if (index == -1) {
       items.style.left = -(slidesLength * slideSize) + "px";
       index = slidesLength - 1;
@@ -388,7 +608,10 @@ function slide(wrapper, items, prev, next) {
       items.style.left = -(1 * slideSize) + "px";
       index = 0;
     }
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     allowShift = true;
   }
 }

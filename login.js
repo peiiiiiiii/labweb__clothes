@@ -10,13 +10,9 @@ let token = null;
 
 
 let login_in = document.querySelector(".js-login");
-<<<<<<< Updated upstream
 async function loginajax(params) {
     let result = await makeRequest("POST", "https://localhost:7206/api/Member/signin",params);
 }
-=======
-import { loginajax} from './fornt__api.js';
->>>>>>> Stashed changes
 
 
 
@@ -32,34 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             email_Address : document.getElementById("CustomerEmail").value,
             password : document.getElementById("CustomerPassword").value
         }
-<<<<<<< Updated upstream
         
         loginajax(params);
-=======
-        const  loginSuss = async(params) => {
-            let res = await loginajax(params);
-
-            localStorage.setItem('token', res.result);
-            // console.log(localStorage.getItem('token'));
-            localStorage.setItem('user', params.email_Address)
-
-            if(!localStorage.getItem('user')){
-                console.log(params.password);
-                
-                window.location.assign("login.html");
-                
-            }else{
-                if(params.password === 'root'){
-                    window.location.assign("test.html");
-                }else{
-                     window.location.assign("index.html");
-                }
-               
-            }
-        };
-        loginSuss(params);
-        
->>>>>>> Stashed changes
         // logintoken();
         
     });
@@ -69,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
 });
-<<<<<<< Updated upstream
 
 
 
@@ -120,5 +89,3 @@ function makeRequest(method, url,params) {
         
     });
 }
-=======
->>>>>>> Stashed changes
