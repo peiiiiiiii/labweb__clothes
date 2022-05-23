@@ -1,0 +1,24 @@
+[
+  {
+    "MemberID": 1,
+    "Email_Address": "root@gmail.com",
+    "Password": "63A9F0EA7BB98050796B649E85481845",
+    "Name": "administrator",
+    "Address": null,
+    "Phone_Number": null,
+    "Gender": null,
+    "BirthDay": null,
+    "RoleID": 1
+  },
+  {
+    "MemberID": 2,
+    "Email_Address": "ioioio@gmail.com",
+    "Password": "76D80224611FC919A5D54F0FF9FBA446",
+    "Name": "eeeee",
+    "Address": null,
+    "Phone_Number": null,
+    "Gender": null,
+    "BirthDay": null,
+    "RoleID": 2
+  }
+]

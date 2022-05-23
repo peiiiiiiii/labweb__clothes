@@ -1,0 +1,68 @@
+[
+  {
+    "TagID": 1,
+    "Commodity_KindsID": 1,
+    "Tag": "新品"
+  },
+  {
+    "TagID": 2,
+    "Commodity_KindsID": 1,
+    "Tag": "外套"
+  },
+  {
+    "TagID": 3,
+    "Commodity_KindsID": 1,
+    "Tag": "襯衫"
+  },
+  {
+    "TagID": 4,
+    "Commodity_KindsID": 1,
+    "Tag": "短袖"
+  },
+  {
+    "TagID": 5,
+    "Commodity_KindsID": 1,
+    "Tag": "長袖"
+  },
+  {
+    "TagID": 6,
+    "Commodity_KindsID": 2,
+    "Tag": "長褲"
+  },
+  {
+    "TagID": 7,
+    "Commodity_KindsID": 2,
+    "Tag": "短褲"
+  },
+  {
+    "TagID": 8,
+    "Commodity_KindsID": 2,
+    "Tag": "繭型褲"
+  },
+  {
+    "TagID": 9,
+    "Commodity_KindsID": 2,
+    "Tag": "新品"
+  },
+  {
+    "TagID": 10,
+    "Commodity_KindsID": 3,
+    "Tag": "帽子"
+  },
+  {
+    "TagID": 11,
+    "Commodity_KindsID": 3,
+    "Tag": "小包"
+  },
+  {
+    "TagID": 12,
+    "Commodity_KindsID": 3,
+    "Tag": "飾品"
+  },
+  {
+    "TagID": 13,
+    "Commodity_KindsID": 3,
+    "Tag": "新品"
+  }
+
+]

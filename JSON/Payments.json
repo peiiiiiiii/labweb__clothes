@@ -1,0 +1,14 @@
+[
+  {
+    "PaymentID": 1,
+    "Payment": "現金"
+  },
+  {
+    "PaymentID": 2,
+    "Payment": "信用卡"
+  },
+  {
+    "PaymentID": 3,
+    "Payment": "超商付款"
+  }
+]

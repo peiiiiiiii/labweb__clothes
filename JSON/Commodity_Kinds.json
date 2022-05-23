@@ -1,0 +1,14 @@
+[
+  {
+    "Commodity_KindID": 1,
+    "Description": "上身"
+  },
+  {
+    "Commodity_KindID": 2,
+    "Description": "下身"
+  },
+  {
+    "Commodity_KindID": 3,
+    "Description": "配件"
+  }
+] 

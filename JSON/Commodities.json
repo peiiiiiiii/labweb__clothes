@@ -1,0 +1,37 @@
+﻿[
+  {
+    "CommodityID": 1,
+    "CommodityName": "YOBI 全機能抗 UV 防曬外套 (經典款)",
+    "Description": "正面立體大口袋：可收納隨身用品，容量大方便又實用",
+    "Material": "防潑水抗 UV 布料：尼龍材質，具有耐磨特性。質地輕薄但帶有挺度，不易皺、不易起毛球",
+    "isReleased": true
+  },
+  {
+    "CommodityID": 2,
+    "CommodityName": "Rookie V 領麻花背心",
+    "Description": "Shattering the glass 是以籃球特技 “Backboard Shattering”(背板粉碎)、glass ceiling (玻璃天花板) 兩者意義結合，展現不斷超越自我、打破歧異與框架的正面意涵",
+    "Material": "立體麻花織紋：麻花兩邊做跳針工法，突顯立體效果。",
+    "isReleased": true
+  },
+  {
+    "CommodityID": 3,
+    "CommodityName": "吸濕排汗短袖套頭襯衫",
+    "Description": "簡約風格 X 機能細節：乾淨外觀，機能細節、剪裁。",
+    "Material": "寬鬆落肩版型：應對夏日天氣的寬鬆剪裁，不黏膚的空氣舒適感",
+    "isReleased": true
+  },
+  {
+    "CommodityID": 4,
+    "CommodityName": "吸濕排汗半開襟襯衫",
+    "Description": "簡約風格 X 機能細節：乾淨外觀，機能細節、剪裁。",
+    "Material": "寬鬆落肩版型：應對夏日天氣的寬鬆剪裁，不黏膚的空氣舒適感",
+    "isReleased": false
+  },
+  {
+    "CommodityID": 5,
+    "CommodityName": "Billy Pants 比例神褲",
+    "Description": "不過寬的穠纖合度，配合精心設計的版型，打造出不論高、矮身型都能呈現好比例的寬褲搭配",
+    "Material": "彈性佳，不易皺，表面帶有些微光澤",
+    "isReleased": true
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "Delivery_PlaceID": 1,
+    "Delivery_Place": "本島"
+  },
+  {
+    "Delivery_PlaceID": 2,
+    "Delivery_Place": "外島"
+  },
+  {
+    "Delivery_PlaceID": 3,
+    "Delivery_Place": "外國"
+  }
+]

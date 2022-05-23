@@ -1,0 +1,14 @@
+[
+  {
+    "StatusID": 1,
+    "State": "已寄送"
+  },
+  {
+    "StatusID": 2,
+    "State": "退貨"
+  },
+  {
+    "StatusID": 3,
+    "State": "準備中"
+  }
+]

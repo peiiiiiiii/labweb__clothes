@@ -1,0 +1,14 @@
+[
+  {
+    "PriceID": 1,
+    "Price": "優惠價"
+  },
+  {
+    "PriceID": 2,
+    "Price": "標價"
+  },
+  {
+    "PriceID": 3,
+    "Price": "單價"
+  }
+]

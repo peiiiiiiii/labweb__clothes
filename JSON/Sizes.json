@@ -1,0 +1,47 @@
+[
+  {
+    "SizeID": 1,
+    "Commodity_KindsID": 1,
+    "Size": "S"
+  },
+  {
+    "SizeID": 2,
+    "Commodity_KindsID": 1,
+    "Size": "M"
+  },
+  {
+    "SizeID": 3,
+    "Commodity_KindsID": 1,
+    "Size": "L"
+  },
+  {
+    "SizeID": 4,
+    "Commodity_KindsID": 2,
+    "Size": "S"
+  },
+  {
+    "SizeID": 5,
+    "Commodity_KindsID": 2,
+    "Size": "M"
+  },
+  {
+    "SizeID": 6,
+    "Commodity_KindsID": 2,
+    "Size": "L"
+  },
+  {
+    "SizeID": 7,
+    "Commodity_KindsID": 3,
+    "Size": "S"
+  },
+  {
+    "SizeID": 8,
+    "Commodity_KindsID": 3,
+    "Size": "M"
+  },
+  {
+    "SizeID": 9,
+    "Commodity_KindsID": 3,
+    "Size": "L"
+  }
+]

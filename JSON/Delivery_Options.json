@@ -1,0 +1,20 @@
+[
+  {
+    "Delivery_OptionsID": 1,
+    "Delivery_Option": "快遞",
+    "Delivery_PlaceID": 1,
+    "Delivery_Cost": 30.00
+  },
+  {
+    "Delivery_OptionsID": 2,
+    "Delivery_Option": "快遞",
+    "Delivery_PlaceID": 2,
+    "Delivery_Cost": 100.00
+  },
+  {
+    "Delivery_OptionsID": 3,
+    "Delivery_Option": "快遞",
+    "Delivery_PlaceID": 3,
+    "Delivery_Cost": 300.00
+  }
+]
