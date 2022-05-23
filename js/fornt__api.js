@@ -53,22 +53,12 @@ async function Delete(CommodityId){
         GetCommodities();
     }
 }
-<<<<<<< Updated upstream
-
-=======
-// search
->>>>>>> Stashed changes
 export async function colectionsearch(params) {
     // console.log(params)
     let result = await makeRequest("POST", "/Commodity/Search",JSON.stringify(params));
     return result[0];
     
 }
-<<<<<<< Updated upstream
-=======
-
-// collection
->>>>>>> Stashed changes
 export async function profiletoken() {
     let result = await makeRequest("GET", "/Commodity/GetTopCommodity");
     return result;
@@ -82,8 +72,6 @@ export async function GetAllTags(){
     let result = await makeRequest("GET","/Tags/GetAll",null);
     return result;
 }
-<<<<<<< Updated upstream
-=======
 
 // detail
 export async function getDetail(id) {
@@ -119,4 +107,3 @@ export async function loginajax(params) {
     let result = await makeRequest("POST", "/Member/signin",params);
     return result;
 }
->>>>>>> Stashed changes
