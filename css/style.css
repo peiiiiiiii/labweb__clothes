@@ -3497,3 +3497,8 @@ html {
   .wrapper__input .iput__info input {
     margin-left: 1rem;
     width: 78%; }
+
+
+item__list-name{
+  color: #fff;
+}
