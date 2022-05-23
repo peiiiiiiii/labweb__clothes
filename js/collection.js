@@ -20,6 +20,13 @@ let search__inner = document.querySelector(".js-header-searchArea");
 
 let collection__list = document.getElementById("collection__list");
 
+// import * as res from '../JSON/C.json' assert { type: "json" };
+import { default as res } from '../JSON/C.json' assert { type: 'json' };
+import { default as getcolor } from '../JSON/getcolor.json' assert { type: 'json' };
+import { default as getTags } from '../JSON/getTag.json' assert { type: 'json' };
+
+
+
 // let filter__all = document.querySelector("#filter__cc");
 
 let fliter__btn = '';
@@ -64,17 +71,19 @@ document.addEventListener("DOMContentLoaded",  ()=> {
         showCollection(res__arr);
     }
     const status = async() => {
-        let res = await profiletoken();
+        // let res = await profiletoken();
+        
+        console.log(res)
         showCollection(res);
     };
     const getColor = async() => {
-        let res = await GetColor();
-        showColor(res);
+        // let res = await GetColor();
+        showColor(getcolor);
     };
     const getAllTags = async() => {
-        let res = await GetAllTags();
+        // let res = await GetAllTags();
         // console.log(res)
-        showAllTag(res);
+        showAllTag(getTags);
     };
     
     getAllTags();
@@ -92,7 +101,7 @@ document.addEventListener("DOMContentLoaded",  ()=> {
         search_status();
         
     }else{
-        status();       
+        showCollection(res);  
     }
     
     function dis2(parentnode,element){
@@ -128,13 +137,11 @@ function dis2(element){
 let wraperrrr = document.querySelector(".wraperrrr");
 
 async function showCollection(res){
-    
     collection__list.innerHTML = "";
     output = "";
     DATA = res;
     
     let filterUrl = [];
-    
     
     if(parseInt(kindID) === 1){
         comparatext = "上身";
@@ -299,6 +306,10 @@ async function showColor(res){
     </ul>
     </div>
     `;
+    collection__list.innerHTML ="";
+    // console.log(res);
+    
+    
 }
 async function showlist(res){
     output = "";
@@ -306,9 +317,8 @@ async function showlist(res){
     collection__list.innerHTML ="";
     // console.log(res);
     
-    
     if(res){
-        res.forEach(element => {
+        await res.forEach(element => {
             if(!element.CommodityPrice){
                 element.CommodityPrice = 0;
             }
@@ -344,13 +354,16 @@ async function showlist(res){
         output = `<p class="item__list-notfound">查無資料</p>`;
     }
     
+    
+    
+    
     collection__list.insertAdjacentHTML('beforeEnd',filter__content);
-    collection__list.insertAdjacentHTML('beforeEnd',output);
     const filter__title = document.querySelector(".filter__title");
     filter__title.innerHTML = `男裝 - ${kind}`
     toggle_s();
     filter__sub();
     price__filter();
+    collection__list.insertAdjacentHTML('beforeEnd',output);
     
 }
 async function filter__sub(){
@@ -452,7 +465,7 @@ async function filter__sub(){
         
 
     });
-    clear__btn.addEventListener("click",()=>{
+    await clear__btn.addEventListener("click",()=>{
         const kinds = document.getElementsByName('kinds');
         const colorss =document.getElementsByName('colorss');
         for(let i=0;i<kinds.length;i++){
@@ -482,6 +495,7 @@ async function price__filter(){
                 })
             }
             showlist(DATA);
+            
         });
     });
 }

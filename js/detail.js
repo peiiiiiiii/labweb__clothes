@@ -33,25 +33,16 @@ import {showProducts2} from "./shoppingCart.js";
 import {showCart} from "./shoppingCart.js";
 import {incres} from "./shoppingCart.js";
 import {decrea} from "./shoppingCart.js";
-<<<<<<< Updated upstream
-=======
 import {getDetail} from "./fornt__api.js";
 import { getrandom4} from "./fornt__api.js";
->>>>>>> Stashed changes
 
-
+import { default as RES } from '../JSON/C.json' assert { type: 'json' };
+import { default as REAN4 } from '../JSON/REAN4.json' assert { type: 'json' };
 
 
 // let PRODUCTS = [];
 
 document.addEventListener('DOMContentLoaded', ()=>{
-<<<<<<< Updated upstream
-    
-    // getProducts( showProducts, errorMessage );
-    doAjaxThings(1);
-    doAjaxThings(2);
-    
-=======
     const status = async() => {
       console.log(productID);
       let res = await getDetail(productID);
@@ -59,16 +50,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
       // console.log(res);
     }
     const statusRandom = async() => {
-      let res = await getrandom4();
+      // let res = await getrandom4();
       // console.log(res);
-      showProducts2(res);
+      showProducts2(REAN4);
     }
 
-    status();
-    statusRandom();
+    // status();
+    // statusRandom();
+    getProducts(RES);
+    showProducts2(REAN4);
 
-
->>>>>>> Stashed changes
     CART.init();
     
     
@@ -78,11 +69,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
 
     
-<<<<<<< Updated upstream
-
-=======
     
->>>>>>> Stashed changes
     
 
     // plus_item.addEventListener("click" , function(ev){
@@ -108,83 +95,36 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
 
     
-<<<<<<< Updated upstream
-=======
     
->>>>>>> Stashed changes
         
     
 });
 
 
-<<<<<<< Updated upstream
-
-async function doAjaxThings(params) {
-    let src= '';
-    // console.log('getp'+params);
-    if(params == 1){
-        // console.log(params);
-        src = "https://localhost:7206/api/Commodity/GetCommodity/full_info/" + productID,params;
-    }else{
-        src="https://localhost:7206/api/Commodity/GetRandom/4";
-    }
-    // console.log(src);
-    let result = await makeRequest("GET", src, params);
-    //console.log(result);
-}
-=======
->>>>>>> Stashed changes
 //猜你喜歡
 
 
 
-<<<<<<< Updated upstream
-// function getProducts(){
-//     const res = {
-        	
-//         id:123,
-//         title:"Bell",
-//         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-//         img:"bell-lg.png",
-//         price:12.34,
-
-//     }
-//     showProducts(res);
-//     const slider = new Slider(
-//         document.querySelector(".slider")
-//     );
-// }
-
-function getProducts(res,params){
-    // console.log(params,res)
-    if(params == 1){
-        showProducts(res);
-    
-    
-
-=======
-async function getProducts(res){
-    
+async function getProducts(oldres){
+    let res = oldres.filter((element) => {
+        return parseInt(element.CommodityId) === parseInt(productID)
+    });
     const status2 = async(res) => {
       let ress = await showProducts(res);
       
     }
-    status2(res);
+    status2(res[0]);
     // ---------------
->>>>>>> Stashed changes
     let slider = document.getElementById('slider'),
     sliderItems = document.getElementById('slides'),
     prev = document.getElementById('prev'),
     next = document.getElementById('next');
     slide(slider, sliderItems, prev, next);
-<<<<<<< Updated upstream
-=======
     
     // const slider = new Slider(
     //   document.querySelector(".slider")
     // );
     
->>>>>>> Stashed changes
     // detail add
     let mins_detail = document.querySelector(".js-detail-mins");
     let add__input = document.querySelector("#add__input");
@@ -255,76 +195,8 @@ async function getProducts(res){
         incres();
         decrea();
     });   
-<<<<<<< Updated upstream
-
-    // size
-
     
 
-   
-    
-    // for (var i = 0, length = radios.length; i < length; i++) {
-    // if (radios[i].checked) {
-    //     // do whatever you want with the checked radio
-    //     alert(radios[i].value);
-
-    //     // only one radio can be logically checked, don't check the rest
-    //     break;
-    // }
-// }
-
-    }else{
-        // console.log('gogo');
-        showProducts2(res);
-        
-    }
-}
-
-function makeRequest(method, url ,params) {
-    return new Promise(function (resolve, reject) {
-        let xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.setRequestHeader('Content-type', 'application/json');
-        
-        if(token != null)
-        {
-            xhr.setRequestHeader('Authorization', token );
-        }
-        if(method == "GET"){
-            xhr.send();
-        }else{
-            xhr.send(JSON.stringify(params));
-        }
-        
-        xhr.onload = function () {
-            if (this.status >= 200 && this.status < 300) {
-                resolve(JSON.parse(xhr.response));
-                // console.log(JSON.parse(xhr.response));
-                let res = JSON.parse(xhr.response);
-                getProducts(res,params);
-                
-                
-                
-                // console.log(xhr.responseText);
-            } else {
-                reject({
-                    status: this.status,
-                    statusText: xhr.statusText
-                });
-            }
-        };
-        xhr.onerror = function () {
-            reject({
-                status: this.status,
-                statusText: xhr.statusText
-            });
-        };
-        
-    });
-=======
-    
-
->>>>>>> Stashed changes
 }
 
 
@@ -339,10 +211,6 @@ function errorMessage(err){
 
 // slider
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 function slide(wrapper, items, prev, next) {
     let posX1 = 0,
         posX2 = 0,
@@ -358,17 +226,10 @@ function slide(wrapper, items, prev, next) {
         cloneLast = lastSlide.cloneNode(true),
         index = 0,
         allowShift = true;
-<<<<<<< Updated upstream
-
-    items.appendChild(cloneFirst);
-    items.insertBefore(cloneLast, firstSlide);
-
-=======
     items.appendChild(cloneLast);
     console.log(firstSlide)
     items.insertBefore(cloneFirst,cloneLast);
     firstSlide.classList.add('active');
->>>>>>> Stashed changes
     // wrapper.classList.add('loaded');
 
     
@@ -379,20 +240,14 @@ function slide(wrapper, items, prev, next) {
   items.addEventListener('touchstart', dragStart);
   items.addEventListener('touchend', dragEnd);
   items.addEventListener('touchmove', dragAction);
-<<<<<<< Updated upstream
-=======
 
   
->>>>>>> Stashed changes
   
   // Click events
   prev.addEventListener('click', function () { shiftSlide(-1) });
   next.addEventListener('click', function () { shiftSlide(1) });
   
   // Transition events
-<<<<<<< Updated upstream
-  items.addEventListener('transitionend', checkIndex);
-=======
   // items.addEventListener('webkitTransitionEnd', checkIndex);
   // items.addEventListener('transitionend', checkIndex);
   ["transitionend", "webkitTransitionEnd", "mozTransitionEnd"].forEach(function(transition) {
@@ -510,7 +365,6 @@ function slide(wrapper, items, prev, next) {
       return {x : x, y : y};
     }
   }
->>>>>>> Stashed changes
   
   function dragStart (e) {
     e = e || window.event;
@@ -553,20 +407,6 @@ function slide(wrapper, items, prev, next) {
   }
   
   function shiftSlide(dir, action) {
-<<<<<<< Updated upstream
-    items.classList.add('shifting');
-    
-    if (allowShift) {
-      if (!action) { posInitial = items.offsetLeft; }
-      console.log(posInitial - slideSize);
-      console.log(posInitial - slideSize);
-      if (dir == 1) {
-        items.style.left = (posInitial - slideSize) + "px";
-        index++;      
-      } else if (dir == -1) {
-        items.style.left = (posInitial + slideSize) + "px";
-        index--;      
-=======
     slides[index].classList.add('active');
     allowShift = true;
     if (allowShift) {
@@ -581,24 +421,15 @@ function slide(wrapper, items, prev, next) {
         index--;   
         slides[index].classList.add('active');
         slides[index +1].classList.remove('active');   
->>>>>>> Stashed changes
       }
     };
     
     allowShift = false;
-<<<<<<< Updated upstream
-  }
-    
-  function checkIndex (){
-    items.classList.remove('shifting');
-    
-=======
     checkIndex();
   }
     
   function checkIndex (){
     // slides[index-1].classList.remove('active');
->>>>>>> Stashed changes
     if (index == -1) {
       items.style.left = -(slidesLength * slideSize) + "px";
       index = slidesLength - 1;
@@ -608,10 +439,6 @@ function slide(wrapper, items, prev, next) {
       items.style.left = -(1 * slideSize) + "px";
       index = 0;
     }
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
     allowShift = true;
   }
 }

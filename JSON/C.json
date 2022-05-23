@@ -1,0 +1,77 @@
+
+[
+    {
+        "CommodityId":1,
+        "CommodityName":"YOBI 全機能抗 UV 防曬外套 (經典款)",
+        "Description":"正面立體大口袋：可收納隨身用品，容量大方便又實用",
+        "Material":"防潑水抗 UV 布料：尼龍材質，具有耐磨特性。質地輕薄但帶有挺度，不易皺、不易起毛球",
+        "isReleased":true,
+        "Price":1881,
+        "S_Price":1786,
+        "Amount":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "CommodityKinds":["上身"],
+        "CommodityTags":["外套","新品"],
+        "CommoditySizes":["L","M","S","XL","XS"],
+        "CommodityColors":["卡其","https://cdn-plain-me.fonlego.com/upload_files/fonlego-rwd/specpic/cop1676_3_02.jpg","灰藍","https://cdn-plain-me.fonlego.com/upload_files/fonlego-rwd/specpic/pln1108-221_3_01.jpg","黑色","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/cop3563_3_02.jpg"],
+        "CommodityImages":["https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln1108-221_1_09.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln1108-221_2_005.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln1108-221_2_01.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln1108-221_2_04.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln1108-221_2_007.jpg"]
+    },
+    {
+        "CommodityId":2,
+        "CommodityName":"Rookie V 領麻花背心",
+        "Description":"Shattering the glass 是以籃球特技 “Backboard Shattering”(背板粉碎)、glass ceiling (玻璃天花板) 兩者意義結合，展現不斷超越自我、打破歧異與框架的正面意涵","Material":"立體麻花織紋：麻花兩邊做跳針工法，突顯立體效果。",
+        "isReleased":true,
+        "Price":0,
+        "S_Price":2166,
+        "Amount":[0,0,0,0],
+        "CommodityKinds":["上身"],
+        "CommodityTags":["短袖","新品"],
+        "CommoditySizes":["M","S"],
+        "CommodityColors":["白色","https://cdn-plain-me.fonlego.com/upload_files/fonlego-rwd/specpic/FSV0001_3_01.jpg","可可","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/pln1108-221_3_06.jpg"],
+        "CommodityImages":["https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln0302-221_1_01.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln0302-221_2_01.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln0302-221_2_07.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln0302-221_2_06.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln0302-221_2_03.jpg"]
+    },
+    {
+        "CommodityId":3,
+        "CommodityName":"吸濕排汗短袖套頭襯衫",
+        "Description":"簡約風格 X 機能細節：乾淨外觀，機能細節、剪裁。",
+        "Material":"寬鬆落肩版型：應對夏日天氣的寬鬆剪裁，不黏膚的空氣舒適感",
+        "isReleased":true,
+        "Price":0,
+        "S_Price":2356,
+        "Amount":[0,0,0,0,0,0,0,0,0],
+        "CommodityKinds":["上身"],
+        "CommodityTags":["襯衫"],
+        "CommoditySizes":["L","M","S"],
+        "CommodityColors":["麻灰","https://cdn-plain-me.fonlego.com/upload_files/fonlego-rwd/specpic/pln3305-221_3_01.jpg","岩鹽","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/pln3305-221_3_02.jpg","深礦藍","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/pln3305-221_3_03.jpg"],
+        "CommodityImages":["https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3305-221_1_01(1).jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3305-221_2_02.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3305-221_1_02(2).jpg"]
+    },
+    {
+        "CommodityId":4,
+        "CommodityName":"吸濕排汗半開襟襯衫",
+        "Description":"簡約風格 X 機能細節：乾淨外觀，機能細節、剪裁。",
+        "Material":"寬鬆落肩版型：應對夏日天氣的寬鬆剪裁，不黏膚的空氣舒適感",
+        "isReleased":false,
+        "Price":0,
+        "S_Price":1976,
+        "Amount":[0,0,0,0,0,0,0,0,0],
+        "CommodityKinds":["上身"],
+        "CommodityTags":["短袖","新品"],
+        "CommoditySizes":["L","M","S"],
+        "CommodityColors":["麻灰","https://cdn-plain-me.fonlego.com/upload_files/fonlego-rwd/specpic/pln3305-221_3_01.jpg","岩鹽","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/pln3305-221_3_02.jpg","深礦藍","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/pln3305-221_3_03.jpg"],
+        "CommodityImages":["https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_1_03.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_2_01.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_2_03.jpg"]
+    },
+    {
+        "CommodityId":5,
+        "CommodityName":"Billy Pants 比例神褲",
+        "Description":"不過寬的穠纖合度，配合精心設計的版型，打造出不論高、矮身型都能呈現好比例的寬褲搭配",
+        "Material":"彈性佳，不易皺，表面帶有些微光澤",
+        "isReleased":true,
+        "Price":0,
+        "S_Price":1480,
+        "Amount":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        "CommodityKinds":["下身"],
+        "CommodityTags":["長褲"],
+        "CommoditySizes":["L","M","S","XL"],
+        "CommodityColors":["卡其","https://cdn-plain-me.fonlego.com/upload_files/fonlego-rwd/specpic/cop1676_3_02.jpg","咖啡","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/cop3563_3_01.jpg","黑色","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/cop3563_3_02.jpg","灰色","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/cop3563_3_03.jpg","橄綠","https://www.plain-me.com/upload_files/fonlego-rwd/specpic/cop3563_6_3_01.jpg"],
+        "CommodityImages":["https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_cop3563_13_1_01(1).jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_cop3563_2_2_04.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_cop3563_13_1_06.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_cop3563_13_1_05.jpg","https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_cop3563_13_1_02.jpg"]
+    }
+]
