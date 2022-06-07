@@ -37,7 +37,7 @@
         </div> -->
         <div class="r-header">
             <div class="r-header__side">
-                <div class="r-header__search r-header__item">
+                <div class="r-header__search r-header__item js-search-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.06 42.95">
                         <g>
                         <path stroke="black" stroke-width="0" d="M42.32,38.68,30.44,26.81a16.84,16.84,0,1,0-3.52,3.55L38.78,42.22a2.5,2.5,0,0,0,3.54-3.54ZM5.16,16.91A11.77,11.77,0,1,1,16.93,28.68h0A11.77,11.77,0,0,1,5.16,16.91Z"></path>
@@ -45,25 +45,27 @@
                     </svg>
                 </div>
                 
-                <div class="r-header__cart r-header__item">
-                    <a>
+                <div class="r-header__cart r-header__item js-cart-btn">
+                    <div>
                         <span class="r-header-text">購物車</span>
                         <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path stroke="black" stroke-width="2" d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"/></g></svg>
-                       
-                    </a>
+                        <p class="icon">
+                            <span class="js-item-count">0</span>
+                        </p>
+                    </div>
                 </div>
                     
-                <div class="r-header__wishlist r-header__item">
-                    <a>
+                <div class="r-header__wishlist r-header__item js-wishlist-btn">
+                    <div>
                         <span class="r-header-text">喜愛商品</span>
                         <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M4.1211 13.5397L11.5628 20L18.879 13.5393C20.3454 12.2463 21.3511 10.6134 21.7864 8.81812C22.0885 7.57346 21.9892 6.81024 21.965 6.66522C21.6588 3.38202 19.2703 1 16.2821 1C14.6983 1 13.2522 1.66752 12.2192 2.81758C11.9744 3.09014 11.7528 3.38981 11.558 3.71412C11.3616 3.39424 11.136 3.09739 10.8857 2.82647C9.82806 1.68208 8.32795 1.00039 6.71799 1.00039C3.72934 1.00039 1.34125 3.38242 1.03471 6.66561C1.01088 6.81063 0.91153 7.57385 1.21363 8.81812C1.649 10.6138 2.65464 12.2463 4.1211 13.5397Z" stroke="black" stroke-width="2"></path>
                         </svg>
-                        <!-- <span><a></a></span> -->
-                    </a>
+                        
+                    </div>
                 </div>
                 <div class="r-header__mypage r-header__item">
-                    <a>
+                    <a class="r__mypage" href="">
                         <span class="r-header-text">我的帳戶</span>
                         <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.7297 15.4479C13.7297 12.0516 10.9765 9.29834 7.5802 9.29834C4.1839 9.29834 1.43066 12.0516 1.43066 15.4479" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path>
@@ -75,31 +77,34 @@
             </div>
         </div>
         <div class="header">
-
+            <div class="l-header__bg js-header-bg js-noScroll"></div>
             <div class="header__wrapper">
                 <div class="header__logo-box">
-                    <svg class="header__logo"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.113 24.464">
-                        <title>REVEL</title>
-                        <path d="M417.456,1217.213v-24.464h10.819a7.088,7.088,0,0,1,3.118.69,7.949,7.949,0,0,1,2.481,1.859,8.655,8.655,0,0,1,1.62,2.619,8.044,8.044,0,0,1,.568,2.964,8.463,8.463,0,0,1-.533,2.98,7.424,7.424,0,0,1-1.534,2.5,6.99,6.99,0,0,1-2.343,1.653l5.582,9.2H432l-5.03-8.2h-4.755v8.2Zm4.756-12.37h5.961a2.513,2.513,0,0,0,1.585-.534,3.767,3.767,0,0,0,1.1-1.43,4.719,4.719,0,0,0,.413-2,4.2,4.2,0,0,0-.483-2.051,4.025,4.025,0,0,0-1.223-1.4,2.746,2.746,0,0,0-1.6-.517h-5.754Z" transform="translate(-417.456 -1192.749)"></path>
-                        <path d="M468.611,1213.045v4.168H451.623v-24.464H468.3v4.169H456.379v5.892h10.3v3.858h-10.3v6.376Z" transform="translate(-413.894 -1192.749)"></path>
-                        <path d="M486.544,1192.749l6.615,18.813,6.547-18.813h5l-9.269,24.464H490.85l-9.3-24.464Z" transform="translate(-410.775 -1192.749)"></path>
-                        <path d="M535.291,1213.045v4.168H518.3v-24.464h16.677v4.169H523.06v5.892h10.3v3.858h-10.3v6.376Z" transform="translate(-406.943 -1192.749)"></path>
-                        <path d="M550.475,1217.213v-24.464h4.755v20.3H567.7v4.168Z" transform="translate(-403.59 -1192.749)"></path>
-                    </svg>
+                    <a href="index.html">
+                        <svg class="header__logo"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.113 24.464">
+                            <title>REVEL</title>
+                            <path d="M417.456,1217.213v-24.464h10.819a7.088,7.088,0,0,1,3.118.69,7.949,7.949,0,0,1,2.481,1.859,8.655,8.655,0,0,1,1.62,2.619,8.044,8.044,0,0,1,.568,2.964,8.463,8.463,0,0,1-.533,2.98,7.424,7.424,0,0,1-1.534,2.5,6.99,6.99,0,0,1-2.343,1.653l5.582,9.2H432l-5.03-8.2h-4.755v8.2Zm4.756-12.37h5.961a2.513,2.513,0,0,0,1.585-.534,3.767,3.767,0,0,0,1.1-1.43,4.719,4.719,0,0,0,.413-2,4.2,4.2,0,0,0-.483-2.051,4.025,4.025,0,0,0-1.223-1.4,2.746,2.746,0,0,0-1.6-.517h-5.754Z" transform="translate(-417.456 -1192.749)"></path>
+                            <path d="M468.611,1213.045v4.168H451.623v-24.464H468.3v4.169H456.379v5.892h10.3v3.858h-10.3v6.376Z" transform="translate(-413.894 -1192.749)"></path>
+                            <path d="M486.544,1192.749l6.615,18.813,6.547-18.813h5l-9.269,24.464H490.85l-9.3-24.464Z" transform="translate(-410.775 -1192.749)"></path>
+                            <path d="M535.291,1213.045v4.168H518.3v-24.464h16.677v4.169H523.06v5.892h10.3v3.858h-10.3v6.376Z" transform="translate(-406.943 -1192.749)"></path>
+                            <path d="M550.475,1217.213v-24.464h4.755v20.3H567.7v4.168Z" transform="translate(-403.59 -1192.749)"></path>
+                        </svg>
+                    </a>
+                    
                 </div>
     
                 <div class="header__left">
                     <ul class="header__left-list">
                         <li class="header__left-item">
                             <p>
-                                <a>首頁</a>
+                                <a href="index.html">首頁</a>
                             </p> 
-                            <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 0;">
+                            <!-- <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 0;">
                                 <ul class="js-header-inview">
                                   <li><a href="/collections/women-new" >男裝</a></li>
-                                  <li><a href="" >女裝</a></li>
+                                  <li><a href="/collections/men-new" >女裝</a></li>
                                 </ul>
-                            </div>   
+                            </div>    -->
                         </li>
                         <li class="header__left-item">
                             <p>
@@ -107,16 +112,10 @@
                             </p>
                             <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 1;">
                                 <ul class="js-header-inview">
-                                  <li><a href="" >TOGA</a></li>
-                                  <li><a href="" >TOGA PULLA</a></li>
-                                  <li><a href="" >TOGA PULLA SHOE</a></li>
-                                  <li><a href="" >TOGA VIRILIS</a></li>
-                                  <li><a href="" >TOGA VIRILIS SHOE</a></li>
-                                  <li><a href="" >TOGA × Dickies</a></li>
-                                  <li><a href="" >TOGA × PORTER</a></li>
-                                  <li><a href="" >TOGA × Gordon Matta-Clark</a></li>
-                                  <li><a href="" >TOGA × TABIO</a></li>
-                                  <li><a href="" >LOOK BOOK</a></li>
+                                  <li><a href="collection.html">全部</a></li>
+                                  <li><a href="collection.html?kind=1">上身</a></li>
+                                  <li><a href="collection.html?kind=2">下身</a></li>
+                                  <li><a href="collection.html?kind=3">配件</a></li>
                                 </ul>
                               </div>    
                         </li>
@@ -124,199 +123,196 @@
                             <p>
                                 <a>女裝</a>
                             </p>    
+                            <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 1;">
+                                <ul class="js-header-inview">
+                                  <li><a href="collection.html">全部</a></li>
+                                  <li><a href="collection.html">短袖</a></li>
+                                  <li><a href="collection.html">外套</a></li>
+                                  <li><a href="collection.html">長褲</a></li>
+                                </ul>
+                            </div>  
                         </li>
-                        <li class="header__left-item">
+                        <!-- <li class="header__left-item">
                             <p>
                                 <a>lookbook</a>
                             </p>    
-                        </li>
-                        <li class="header__left-item">
+                        </li> -->
+                        <!-- <li class="header__left-item">
                             <p>
                                 <a>聯絡我們</a>
                             </p>    
-                        </li>
+                        </li> -->
                     </ul>
-                    <!-- <h1 class="heading-primary">
-                        <span class="heading-primary--main">Outdoors</span>
-                        <span class="heading-primary--sub">is where life happens</span>
-                    </h1> -->
+                    
+                    <div class="l-header__cart-btn for-mobile js-header-cart " >
+                        <div class="l-header__cart-btn-inner ">
+                            <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path stroke="black" stroke-width="2" d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"/></g></svg>
+                            <p class="icon">
+                                <span class="js-item-count2">0</span>
+                            </p>
+                        </div>
+                    </div>
     
                     <div class="l-header__btn js-header-nav">
                         <!-- <i class="fa-solid fa-bars"></i> -->
-                        <div class="l-header__btn-border" >
+                        <div class="l-header__btn-border">
                             <span class="l-header__btn-border-icon">
-                                <span class="l-header__btn-border-icon-close"></span>
+                                <span class="l-header__btn-border-icon-close " id="nav-close"></span>
                                 
                             </span>
                         </div>
+
                     </div>
+                </div>
+
+            </div>
+
+            
+
+            <nav class="l-header__drawer js-header-navArea">
+                <div class="l-header__side for-mobile">
+
+                <!-- 代換 -->
+                  
+                  <!--  -->
+                </div>
+                <div class="l-header__drawer-inner">
+                  
+                  <div  class="l-header__search-input for-mobile">
+                    <input type="text" id="search__itemmmm" class="js-search" name="q" value="">
+                    <button type="submit"></button>
+                  </div>
+                  <!-- <ul class="l-header__drawer-top js-header-inview">
+                    
+                      <li><a class="js-header-inview-item" href="/collections/new" >NEW</a></li>
+                    
+                    
+                    <li><a class="js-header-inview-item" href="/collections/toga-dickies" >TOGA × Dickies</a></li>
+                    <li><a class="js-header-inview-item" href="/collections/toga-porter" >TOGA × PORTER</a></li>
+                    <li><a class="js-header-inview-item" href="/collections/toga-gordon-matta-clark" >TOGA × Gordon Matta-Clark</a></li>
+                  </ul> -->
+                  
+                  <dl class="js-header-inview">
+                    <dt class="js-header-toggleClick">
+                        <span class="js-header-inview-item" >WOMEN</span>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li><a class="js-header-inview-item" href="/collections/men" >全部</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-tops" >短袖</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-bottoms" >外套</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-outerwear" >長褲</a></li>
+                        
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl class="js-header-inview">
+                    <dt class="js-header-toggleClick"><span class="js-header-inview-item" >MEN</span></dt>
+                    <dd>
+                      <ul>
+                        <li><a class="js-header-inview-item" href="/collections/men" >全部</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-tops" >短袖</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-bottoms" >外套</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-outerwear" >長褲</a></li>
+                        
+                      </ul>
+                    </dd>
+                  </dl>
+                  <!-- new  -->
+                  <ul class="l-header__drawer-info js-header-inview">
+        
+                    <li class="js-cart-two">
+                            <a class="js-header-inview-item" >
+                                <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path stroke="black" stroke-width="2" d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"/></g></svg>
+                                <span class="">購物車</span>
+                                
+                            </a>
+                    </li>
+                    <li>
+                        <!-- <a class="js-header-inview-item" href="profile.html" >
+                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7297 15.4479C13.7297 12.0516 10.9765 9.29834 7.5802 9.29834C4.1839 9.29834 1.43066 12.0516 1.43066 15.4479" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path>
+                                <path d="M7.58063 7.54113C9.27877 7.54113 10.6554 6.16451 10.6554 4.46637C10.6554 2.76822 9.27877 1.3916 7.58063 1.3916C5.88248 1.3916 4.50586 2.76822 4.50586 4.46637C4.50586 6.16451 5.88248 7.54113 7.58063 7.54113Z" stroke="black" stroke-width="1.6"></path>
+                            </svg>
+                            <span class="">我的帳戶</span>
+                        </a> -->
+                       <div class="js-header-inview-item">
+                            <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M4.1211 13.5397L11.5628 20L18.879 13.5393C20.3454 12.2463 21.3511 10.6134 21.7864 8.81812C22.0885 7.57346 21.9892 6.81024 21.965 6.66522C21.6588 3.38202 19.2703 1 16.2821 1C14.6983 1 13.2522 1.66752 12.2192 2.81758C11.9744 3.09014 11.7528 3.38981 11.558 3.71412C11.3616 3.39424 11.136 3.09739 10.8857 2.82647C9.82806 1.68208 8.32795 1.00039 6.71799 1.00039C3.72934 1.00039 1.34125 3.38242 1.03471 6.66561C1.01088 6.81063 0.91153 7.57385 1.21363 8.81812C1.649 10.6138 2.65464 12.2463 4.1211 13.5397Z" stroke="black" stroke-width="2"></path>
+                            </svg>
+                            <span class="">喜愛商品</span>
+                       </div>
+                        
+                    </li>
+                    <li>
+                        <a class="js-header-inview-item" href="profile.html" >
+                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7297 15.4479C13.7297 12.0516 10.9765 9.29834 7.5802 9.29834C4.1839 9.29834 1.43066 12.0516 1.43066 15.4479" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path>
+                                <path d="M7.58063 7.54113C9.27877 7.54113 10.6554 6.16451 10.6554 4.46637C10.6554 2.76822 9.27877 1.3916 7.58063 1.3916C5.88248 1.3916 4.50586 2.76822 4.50586 4.46637C4.50586 6.16451 5.88248 7.54113 7.58063 7.54113Z" stroke="black" stroke-width="1.6"></path>
+                            </svg>
+                            <span class="">我的帳戶</span>
+                        </a>
+                        
+                    </li>
+                    
+                    
+                  </ul>
+
+                  
+                </div>
+            </nav>
+            <!-- 大改 -->
+            <div class="l-header__cart js-header-cartArea" >
+                
+                <div class="l-header__cart-inner js-header-cartInner" id="cart__inner">
+                
+                </div>
+                <div class="l-header__cart-bottom">
+                  <div class="product__list-total">
+                    <dl>
+                      <dt>總計</dt>
+                      <dd id="total-cart"></dd>
+                    </dl>
+                  </div>
+                  <div class="product__list-btn">
+                    <a class="form__btn btns__item" href="checkout.html">
+                        <span>結帳</span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="l-header__wish js-header-wishArea" >
+                <div class="l-header__wish-inner js-header-wishInner" id="wish__inner">
+                </div>
+            </div>
+
+            <div class="l-header__search js-header-searchArea" >
+                <div class="l-header__search-inner js-search-inner">
+                  <form action="/search" class="l-header__search-input">
+                    <input id="ssssss" class="js-search" type="text" name="q" value="">
+                    <button id="nav__search2222" class="icon__arrow"></button>
+                  </form>
                 </div>
             </div>
         </div>
 
+        
         <div class="c-main">
             <main>
                 <div id="shopify-section-collection-template" class="collection__section">
                     <section class="item collection-item" data-handle="men">
                         <div class="item__inner">
-                            <div class="item__list">
-                                <div class="item__list-tool">
-                                    <h2>男裝 - 全部</h2>
-                                    <ul class="item__list-filter">
-                                        <li class="item__list-filter-item">
-                                            <p class="js-toggleClick-filter filter__icon">篩選</p>
-                                            <div class="item__list-check js-toggleClickArea-filter">
-                                            <dl class="js-toggleInview">
-                                                <dt><span class="js-toggleInview-item" >CATEGORY</span></dt>
-                                                <dd>
-                                                <ul class="item__list-check-list list-category js-toggleInview">
-                                                    <!-- <li>
-                                                    <input type="radio" id="category_01">
-                                                    <label class="js-toggleInview-item" for="category_01" >全部</label>
-                                                    </li> -->
-                                                    <li>
-                                                    <input type="radio" id="category_02">
-                                                    <label class="js-toggleInview-item" for="category_02" >上身</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="category_03">
-                                                    <label class="js-toggleInview-item" for="category_03" >下身</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="category_04">
-                                                    <label class="js-toggleInview-item" for="category_04" >配件</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="category_05">
-                                                    <label class="js-toggleInview-item" for="category_05" >SHOES</label>
-                                                    </li>
-                                                    
-                                                </ul>
-                                                </dd>
-                                            </dl>
-                                            <dl class="js-toggleInview">
-                                                <dt><span class="js-toggleInview-item" >顏色</span></dt>
-                                                <dd>
-                                                <ul class="item__list-check-list list-color js-toggleInview">
-                                                    <li>
-                                                    <input type="radio" id="color_01">
-                                                    <label class="js-toggleInview-item" for="color_01" >全部</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="color_02">
-                                                    <label class="js-toggleInview-item" for="color_02" >黑色</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="color_03">
-                                                    <label class="js-toggleInview-item" for="color_03" >白色</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="color_04">
-                                                    <label class="js-toggleInview-item" for="color_04" >咖啡</label>
-                                                    </li>
-                                                    <li>
-                                                    <input type="radio" id="color_05">
-                                                    <label class="js-toggleInview-item" for="color_05" >黃色</label>
-                                                    </li>
-                                                    
-                                                </ul>
-                                                </dd>
-                                            </dl>
-                                            <ul class="item__list-buttons">
-                                                <li class="item__list-ok js-toggleClick">
-                                                <span>確定</span>
-                                                </li>
-                                                <li class="item__list-clear">
-                                                <div class="item__list-clear-icon"></div>
-                                                <span>清除</span>
-                                                </li>
-                                            </ul>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <p class="js-toggleClick-filter oreder">排序</p>
-                                            <div class="item__list-sort js-toggleClickArea-filter" >
-                                                <!-- style="display: none;" -->
-                                            <ul class="js-toggleInview">
-                                                <!-- <li><a class="js-sort-latest js-toggleInview-item" >最新</a></li> -->
-                                                <li><a class="js-sort-price js-toggleInview-item" >價格： 最高到最低</a></li>
-                                                <li><a class="js-sort-price-desc js-toggleInview-item" >價格： 最低到最高</a></li>
-                                            </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <p class="item__list-notfound"></p>
+                            <div class="item__list" id="collection__list">
+                                
+                                    
+                                    
                             
-                                </div>
-                                <div class="item__list-item" data-id="" data-price="550">
-                                    <a href="">
-                                        <figure>
-                                            <div class="item__list-photo js-follower-Area">
-                                                <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_1_03.jpg">
-                                                
-                                            </div>
-                                            <figcaption>
-                                            
-                                            <p class="item__list-name">吸濕排汗半開襟襯衫</p>
-                                            <ul class="item__list-prices">
-                                                <li class="item__list-price">NT 1480</li>
-                                            </ul>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="item__list-item" data-id="" data-price="550">
-                                    <a href="">
-                                        <figure>
-                                            <div class="item__list-photo js-follower-Area">
-                                                <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_1_03.jpg">
-                                                
-                                            </div>
-                                            <figcaption>
-                                            
-                                            <p class="item__list-name">吸濕排汗半開襟襯衫</p>
-                                            <ul class="item__list-prices">
-                                                <li class="item__list-price">NT 1480</li>
-                                            </ul>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="item__list-item" data-id="" data-price="550">
-                                    <a href="">
-                                        <figure>
-                                            <div class="item__list-photo js-follower-Area">
-                                                <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_1_03.jpg">
-                                                
-                                            </div>
-                                            <figcaption>
-                                            
-                                            <p class="item__list-name">吸濕排汗半開襟襯衫</p>
-                                            <ul class="item__list-prices">
-                                                <li class="item__list-price">NT 1480</li>
-                                            </ul>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="item__list-item" data-id="" data-price="550">
-                                    <a href="">
-                                        <figure>
-                                            <div class="item__list-photo js-follower-Area">
-                                            <img src="https://cdn.shopify.com/s/files/1/0275/8003/9270/products/TC21-FI522_02_400x.jpg?v=1648182610">
-                                            
-                                            </div>
-                                            <figcaption>
-                                            <p class="item__list-name">123456789</p>
-                                            <ul class="item__list-prices">
-                                                <li class="item__list-price">NT 4000</li>
-                                            </ul>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
+                               
+                                
                             </div>
+
+                            
                         </div>
 
                         <!-- 分頁 -->
@@ -442,5 +438,7 @@
         
 
     </body>
-    <script src="detail.js"></script>
+    <script  type="module" src="js/fornt__api.js"></script>
+    <script  type="module" src="js/main.js"></script>
+    <script  type="module" src="js/collection.js"></script>
 </html>

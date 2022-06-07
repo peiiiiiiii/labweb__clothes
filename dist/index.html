@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+        <!--<link rel="stylesheet" href="css/icon-font.css">-->
+        
+        <link rel="stylesheet" href="/style.5b6608d6.css">
+        <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        
+        <title>Clothes website</title>
+    </head>
+    <style>
+        
+       
+            
+        
+    </style>
+    <body>
+        <!-- <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natous</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
+                    </ul>
+            </nav>
+        </div> -->
+
+        <div class="r-header">
+            <div class="r-header__side">
+                <div class="r-header__search r-header__item js-search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.06 42.95">
+                        <g>
+                        <path stroke="black" stroke-width="0" d="M42.32,38.68,30.44,26.81a16.84,16.84,0,1,0-3.52,3.55L38.78,42.22a2.5,2.5,0,0,0,3.54-3.54ZM5.16,16.91A11.77,11.77,0,1,1,16.93,28.68h0A11.77,11.77,0,0,1,5.16,16.91Z"></path>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="r-header__cart r-header__item js-cart-btn">
+                    <div>
+                        <span class="r-header-text">購物車</span>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path stroke="black" stroke-width="2" d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"></path></g></svg>
+                        <p class="icon">
+                            <span class="js-item-count">0</span>
+                        </p>
+                    </div>
+                </div>
+                    
+                <!-- <div class="r-header__wishlist r-header__item">
+                    <a href="">
+                        <span class="r-header-text">喜愛商品</span>
+                        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M4.1211 13.5397L11.5628 20L18.879 13.5393C20.3454 12.2463 21.3511 10.6134 21.7864 8.81812C22.0885 7.57346 21.9892 6.81024 21.965 6.66522C21.6588 3.38202 19.2703 1 16.2821 1C14.6983 1 13.2522 1.66752 12.2192 2.81758C11.9744 3.09014 11.7528 3.38981 11.558 3.71412C11.3616 3.39424 11.136 3.09739 10.8857 2.82647C9.82806 1.68208 8.32795 1.00039 6.71799 1.00039C3.72934 1.00039 1.34125 3.38242 1.03471 6.66561C1.01088 6.81063 0.91153 7.57385 1.21363 8.81812C1.649 10.6138 2.65464 12.2463 4.1211 13.5397Z" stroke="black" stroke-width="2"></path>
+                        </svg>
+                        
+                    </a>
+                </div> -->
+                <div class="r-header__mypage r-header__item">
+                    <a class="r__mypage" href="">
+                        <span class="r-header-text">我的帳戶</span>
+                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.7297 15.4479C13.7297 12.0516 10.9765 9.29834 7.5802 9.29834C4.1839 9.29834 1.43066 12.0516 1.43066 15.4479" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path>
+                            <path d="M7.58063 7.54113C9.27877 7.54113 10.6554 6.16451 10.6554 4.46637C10.6554 2.76822 9.27877 1.3916 7.58063 1.3916C5.88248 1.3916 4.50586 2.76822 4.50586 4.46637C4.50586 6.16451 5.88248 7.54113 7.58063 7.54113Z" stroke="black" stroke-width="1.6"></path>
+                        </svg>
+                        <!-- <span><a>喜愛商品</a></span> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="l-header__bg js-header-bg js-noScroll"></div>
+            <div class="header__wrapper">
+                <div class="header__logo-box">
+                    <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.113 24.464">
+                        <title>REVEL</title>
+                        <path d="M417.456,1217.213v-24.464h10.819a7.088,7.088,0,0,1,3.118.69,7.949,7.949,0,0,1,2.481,1.859,8.655,8.655,0,0,1,1.62,2.619,8.044,8.044,0,0,1,.568,2.964,8.463,8.463,0,0,1-.533,2.98,7.424,7.424,0,0,1-1.534,2.5,6.99,6.99,0,0,1-2.343,1.653l5.582,9.2H432l-5.03-8.2h-4.755v8.2Zm4.756-12.37h5.961a2.513,2.513,0,0,0,1.585-.534,3.767,3.767,0,0,0,1.1-1.43,4.719,4.719,0,0,0,.413-2,4.2,4.2,0,0,0-.483-2.051,4.025,4.025,0,0,0-1.223-1.4,2.746,2.746,0,0,0-1.6-.517h-5.754Z" transform="translate(-417.456 -1192.749)"></path>
+                        <path d="M468.611,1213.045v4.168H451.623v-24.464H468.3v4.169H456.379v5.892h10.3v3.858h-10.3v6.376Z" transform="translate(-413.894 -1192.749)"></path>
+                        <path d="M486.544,1192.749l6.615,18.813,6.547-18.813h5l-9.269,24.464H490.85l-9.3-24.464Z" transform="translate(-410.775 -1192.749)"></path>
+                        <path d="M535.291,1213.045v4.168H518.3v-24.464h16.677v4.169H523.06v5.892h10.3v3.858h-10.3v6.376Z" transform="translate(-406.943 -1192.749)"></path>
+                        <path d="M550.475,1217.213v-24.464h4.755v20.3H567.7v4.168Z" transform="translate(-403.59 -1192.749)"></path>
+                    </svg>
+                </div>
+    
+                <div class="header__left">
+                    <ul class="header__left-list">
+                        <li class="header__left-item">
+                            <p>
+                                <a href="/index.html">首頁</a>
+                            </p> 
+                            <!-- <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 0;">
+                                <ul class="js-header-inview">
+                                  <li><a href="/collections/women-new" >男裝</a></li>
+                                  <li><a href="/collections/men-new" >女裝</a></li>
+                                </ul>
+                            </div>    -->
+                        </li>
+                        <li class="header__left-item">
+                            <p>
+                                <a>男裝</a>
+                            </p>
+                            <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 1;">
+                                <ul class="js-header-inview">
+                                  <li><a href="/collection.html">全部</a></li>
+                                  <li><a href="/collection.html?kind=1">上身</a></li>
+                                  <li><a href="/collection.html?kind=2">下身</a></li>
+                                  <li><a href="/collection.html?kind=3">配件</a></li>
+                                </ul>
+                              </div>    
+                        </li>
+                        <li class="header__left-item">
+                            <p>
+                                <a>女裝</a>
+                            </p>    
+                            <div class="header__left-sec js-header-toggleArea" style="display: none; opacity: 1;">
+                                <ul class="js-header-inview">
+                                  <li><a href="/collection.html">全部</a></li>
+                                  <li><a href="/collection.html">短袖</a></li>
+                                  <li><a href="/collection.html">外套</a></li>
+                                  <li><a href="/collection.html">長褲</a></li>
+                                </ul>
+                            </div>  
+                        </li>
+                        <!-- <li class="header__left-item">
+                            <p>
+                                <a>lookbook</a>
+                            </p>    
+                        </li> -->
+                        <!-- <li class="header__left-item">
+                            <p>
+                                <a>聯絡我們</a>
+                            </p>    
+                        </li> -->
+                    </ul>
+                    
+                    <div class="l-header__cart-btn for-mobile js-header-cart ">
+                        <div class="l-header__cart-btn-inner ">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path stroke="black" stroke-width="2" d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"></path></g></svg>
+                        </div>
+                    </div>
+    
+                    <div class="l-header__btn js-header-nav">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                        <div class="l-header__btn-border">
+                            <span class="l-header__btn-border-icon">
+                                <span class="l-header__btn-border-icon-close " id="nav-close"></span>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+            <nav class="l-header__drawer js-header-navArea">
+                <div class="l-header__side for-mobile">
+
+                <!-- 代換 -->
+                  
+                  <!--  -->
+                </div>
+                <div class="l-header__drawer-inner">
+                  
+                  <div class="l-header__search-input for-mobile">
+                    <input type="text" id="search__itemmmm" class="js-search" name="q" value="">
+                    <button type="submit"></button>
+                  </div>
+                  <!-- <ul class="l-header__drawer-top js-header-inview">
+                    
+                      <li><a class="js-header-inview-item" href="/collections/new" >NEW</a></li>
+                    
+                    
+                    <li><a class="js-header-inview-item" href="/collections/toga-dickies" >TOGA × Dickies</a></li>
+                    <li><a class="js-header-inview-item" href="/collections/toga-porter" >TOGA × PORTER</a></li>
+                    <li><a class="js-header-inview-item" href="/collections/toga-gordon-matta-clark" >TOGA × Gordon Matta-Clark</a></li>
+                  </ul> -->
+                  
+                  <dl class="js-header-inview">
+                    <dt class="js-header-toggleClick">
+                        <span class="js-header-inview-item">WOMEN</span>
+                    </dt>
+                    <dd>
+                      <ul>
+                        <li><a class="js-header-inview-item" href="/collections/men">全部</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-tops">短袖</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-bottoms">外套</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-outerwear">長褲</a></li>
+                        
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl class="js-header-inview">
+                    <dt class="js-header-toggleClick"><span class="js-header-inview-item">MEN</span></dt>
+                    <dd>
+                      <ul>
+                        <li><a class="js-header-inview-item" href="/collections/men">全部</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-tops">短袖</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-bottoms">外套</a></li>
+                        <li><a class="js-header-inview-item" href="/collections/men-outerwear">長褲</a></li>
+                        
+                      </ul>
+                    </dd>
+                  </dl>
+                  <!-- new  -->
+                  <ul class="l-header__drawer-info js-header-inview">
+        
+                    <li class="js-cart-two">
+                            <a class="js-header-inview-item">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path stroke="black" stroke-width="2" d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"></path></g></svg>
+                                <span class="">購物車</span>
+                            </a>
+                    </li>
+                    <li>
+                        <a class="js-header-inview-item" href="/profile.html">
+                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7297 15.4479C13.7297 12.0516 10.9765 9.29834 7.5802 9.29834C4.1839 9.29834 1.43066 12.0516 1.43066 15.4479" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path>
+                                <path d="M7.58063 7.54113C9.27877 7.54113 10.6554 6.16451 10.6554 4.46637C10.6554 2.76822 9.27877 1.3916 7.58063 1.3916C5.88248 1.3916 4.50586 2.76822 4.50586 4.46637C4.50586 6.16451 5.88248 7.54113 7.58063 7.54113Z" stroke="black" stroke-width="1.6"></path>
+                            </svg>
+                            <span class="">我的帳戶</span>
+                        </a>
+                    </li>
+                    
+                    
+                  </ul>
+
+                  
+                </div>
+            </nav>
+            <!-- 大改 -->
+            <div class="l-header__cart js-header-cartArea">
+                
+                
+                <div class="l-header__cart-inner js-header-cartInner" id="cart__inner">
+
+                </div>
+                
+                <div class="l-header__cart-bottom">
+                  <div class="product__list-total">
+                    <dl>
+                      <dt>總計</dt>
+                      <dd id="total-cart"></dd>
+                    </dl>
+                  </div>
+                  <div class="product__list-btn">
+                    <a class="form__btn btns__item" href="/checkout.html">
+                        <span>結帳</span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="l-header__search js-header-searchArea">
+                <div class="l-header__search-inner js-search-inner">
+                  <form action="/search" class="l-header__search-input">
+                    <input id="ssssss" class="js-search" type="text" name="q" value="">
+                    <button id="nav__search2222" class="icon__arrow"></button>
+                  </form>
+                </div>
+              </div>
+        </div>
+
+        <div class="home__main">
+            <section id="section_one__wrapper">
+                <div class="section_one__wrapper">
+                    <div class="section_one">
+                        <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/website/20220406_CNBWCBG_LB_WEB_005(1).jpg" alt="">
+                        <div class="section__scroll section__scroll-content" data-scroll="" data-scroll-speed="-1">
+                            <div class="section__text">
+                                <p>SALE 專區</p>
+                                <p>最低五折起</p>
+                            </div>
+                            
+                        </div>
+                        
+                      </div>
+                      <div class="section_two">
+                        <img src="https://i.shgcdn.com/4a43a09b-2221-4f5a-82e7-8705a8c2e018/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="">
+                        <div class="section__scroll section__scroll-content" data-scroll="" data-scroll-speed="-1">
+                            <div class="section__text">
+                                <p>必買推薦</p>
+                                <p>Relax WEAR 好著</p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                  <!-- <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span> <span>section</span></h1>
+                  <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">with GSAP ScrollTrigger & Locomotive Scroll</p> -->
+                </div>
+                
+            </section>
+          
+            <section id="sectionPin">
+                <div class="pin-wrap">
+                    <h2 class="title">新品上市</h2>
+                    
+                        <div class="item__list-item ss">
+                            <a href="/detail.html?id=5">
+                                <figure>
+                                    <div class="item__list-photo js-follower-Area">
+                                        <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln1108-221_1_09.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                    <p class="item__list-sale"></p>
+                                    <p class="item__list-name">YOBI 全機能抗 UV 防曬外套 (經典款)</p>
+                                    <ul class="item__state">
+                                        <li class="item__list-price">NT 1786</li>
+                                    </ul>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="item__list-item ss">
+                            <a href="/detail.html?id=8">
+                                <figure>
+                                    <div class="item__list-photo js-follower-Area">
+                                        <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln0302-221_1_01.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                    <p class="item__list-sale"></p>
+                                    <p class="item__list-name">Rookie V 領麻花背心</p>
+                                    <ul class="item__state">
+                                        <li class="item__list-price">NT 2166</li>
+                                    </ul>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="item__list-item ss">
+                            <a href="/detail.html?id=10">
+                                <figure>
+                                    <div class="item__list-photo js-follower-Area">
+                                        <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3601-221_1_03.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                    <p class="item__list-sale"></p>
+                                    <p class="item__list-name">吸濕排汗半開襟襯衫</p>
+                                    <ul class="item__state">
+                                        <li class="item__list-price">NT 1976</li>
+                                    </ul>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="item__list-item ss">
+                            <a href="/detail.html?id=9">
+                                <figure>
+                                    <div class="item__list-photo js-follower-Area">
+                                        <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/prodpic/D_pln3305-221_1_01(1).jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                    <p class="item__list-sale"></p>
+                                    <p class="item__list-name">吸濕排汗短袖套頭襯衫 </p>
+                                    <ul class="item__state">
+                                        <li class="item__list-price">NT 2356</li>
+                                    </ul>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    
+            
+                </div>
+            </section>
+
+            <section class="section__slider">
+                <div class="wrapper__dis slider">
+                    <div class="item__wrapper-slider ">
+                        <div class="slider-item active">
+                            <div class="slider-item-co">
+                                <div class="slider-left">
+                                    <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/website/Cover3.jpg" alt="">
+                                </div><div class="wrapper__dis__right">
+                                    <h1>系列</h1>
+                                    <a class="form__btn" href="/collection.html"><span>查看</span></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="slider-item ">
+                            <div class="slider-item-co">
+                                <div class="slider-left">
+                                    <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/website/20220406_CNBWCBG_LB_WEB_000(1).jpg" alt="">
+                                </div>
+                                <div class="wrapper__dis__right">
+                                    <h1>系列</h1>
+                                    <a class="form__btn" href="/collection.html"><span>查看</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="slider-item-co">
+                                <div class="slider-left">
+                                    <img src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/website/000(3).jpg" alt="">
+                                </div><div class="wrapper__dis__right">
+                                    <h1>系列</h1>
+                                    <a class="form__btn" href="/collection.html"><span>查看</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="slide-indicators">
+                            <li class="slide-indicator"></li>
+                            <li class="slide-indicator"></li>
+                            <li class="slide-indicator"></li>
+                            <li class="slide-indicator"></li>
+                            <li class="slide-indicator"></li>
+                        </ol>
+                        
+                    </div>
+                    
+                    <span class="slider-control-prev" role="button">
+                        <img aria-hidden="true" src="/prev.85dbeb60.svg" alt="Previous Slide Button">
+                    </span>
+                    <span class="slider-control-next" role="button">
+                        <img aria-hidden="true" src="/next.7de05283.svg" alt="Next Slide Button">
+                    </span>
+                </div>
+                
+                <div class="wrapper__blogger">
+                    
+
+                    <div class="wrapper__blogger__right">
+                        <div class="shogun-draggable-block__left"> 
+                            <div>
+                                  
+                                    <div class="shogun-draggable-block__product shogun-draggable-block__product--1" data-index="1" data-enable="true">
+                                        <a href="/detail.html?id=8">
+                                            <p class="">1</p>                    
+                                        </a>
+                        
+                                        
+                                        <div class="shogun-draggable-block__product__title">
+                                            <a href="/detail.html?id=8">Rookie</a>    
+                                            <br>
+                                            <a href="/detail.html?id=8">V 領麻花背心</a>
+                                        </div>
+                                        
+                                    </div>
+                                
+                                
+                                
+                                    <div class="shogun-draggable-block__product shogun-draggable-block__product--2" data-index="2" data-enable="true">
+                                      <a href="/detail.html?id=16">
+                                        <p>2</p>
+                                      </a>
+                                        
+                                        <div class="shogun-draggable-block__product__title">
+                                            <a href="/detail.html?id=16">3-pointer mini </a>   
+                                            <br>
+                                            <a href="/detail.html?id=16">三分斜背包</a>
+                                        </div>
+                                        
+                                    </div>
+                                
+                                
+                                
+                                    <div class="shogun-draggable-block__product shogun-draggable-block__product--3" data-index="3" data-enable="true">
+                                      <a href="/detail.html?id=21">
+                                        <p class="">3</p>
+                                      </a>
+                                         
+                                        <div class="shogun-draggable-block__product__title">
+                                            <a href="/detail.html?id=21">中信兄弟 X plain-me </a>   
+                                            <br>
+                                            <a href="/detail.html?id=21">丹寧寬褲</a>
+                                        </div>
+                                        
+                                    </div>
+                                
+                                
+                                
+                                    <div class="shogun-draggable-block__product shogun-draggable-block__product--4" data-index="4" data-enable="true">
+                                      <a href="/detail.html?id=26">
+                                        <p>4</p>
+                                      </a>
+                                         
+                                        <div class="shogun-draggable-block__product__title">
+                                            <a href="/detail.html?id=26">Era Vans World Code </a>   
+                                            <br>
+                                            <a href="/detail.html?id=26">休閒鞋</a>
+                                        </div>
+                                        
+                                    </div>
+                                
+                                
+                                
+                            </div>
+                            
+                            
+                        </div> 
+                    </div>
+
+                    <div class="wrapper__blogger__left">
+                        <div class="shogun-draggable-block__image">
+                            <img data-src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/club/%E6%9C%AA%E5%91%BD%E5%90%8D-2(11).jpg" style="" alt="" class="shogun-image  shogun-lazyloaded" src="https://cdn-plain-me.fonlego.com//upload_files/fonlego-rwd/club/%E6%9C%AA%E5%91%BD%E5%90%8D-2(11).jpg" width="" height="">
+            
+                            
+                            
+                                <div class="shogun-draggable-block__hotspot shogun-draggable-block__hotspot--1" data-index="1" data-enable="true" style="left: 50%; top: 20%;">
+                                    <a href="">1</a>
+                                </div>
+                            
+                            
+                                <div class="shogun-draggable-block__hotspot shogun-draggable-block__hotspot--2" data-index="2" data-enable="true" style="left: 56%; top: 35%;">
+                                    <a href="">2</a>
+                                </div>
+                            
+                            
+                                <div class="shogun-draggable-block__hotspot shogun-draggable-block__hotspot--3" data-index="3" data-enable="true" style="left: 56%; top: 65%;">
+                                    <a href="">3</a>
+                                </div>
+                            
+                            
+                                <div class="shogun-draggable-block__hotspot shogun-draggable-block__hotspot--4" data-index="4" data-enable="true" style="left: 56%; top: 90%;">
+                                    <a href="">4</a>
+                                </div>
+                            
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="footer__section">
+                <footer class="footer">
+                    <div class="footer__wrap">
+                        <form class="footer__news">
+                            <div class="footer__news-svg">
+                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="18" height="17" fill="url(#pattern0)"></rect>
+                                    <defs>
+                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_137_2487" transform="translate(0.0277778) scale(0.00944444 0.01)"></use>
+                                    </pattern>
+                                    <image id="image0_137_2487" width="100" height="100" xlink:href="data:image/png;base64,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"></image>
+                                    </defs>
+                                </svg>
+                                <span>訂閱電子報</span>    
+                            </div>
+                            <div class="footer__news-input">
+                                <input type="email" name="" placeholder="輸入你的Email">
+                                <button class="footer__news-button" type="submit" name="commit"></button>
+                            </div>
+                        </form>
+                        <div class="footer__contact">
+                            <div class="footer__block">
+                                <h2 class="footer__title">關於我們</h2>
+                                <ul class="footer__nav">
+                                    <li class="footer__nav-item">商品資訊</li>
+                                    <li class="footer__nav-item">隱私權及網站使用條款</li>
+                                </ul>
+                            </div>
+                            <div class="footer__block">
+                                <h2 class="footer__title">購物說明</h2>
+                                <ul class="footer__nav">
+                                    <li class="footer__nav-item">付款方式</li>
+                                    <li class="footer__nav-item">運送方式</li>
+                                    <li class="footer__nav-item">退換貨方式</li>
+                                </ul>
+                            </div>
+                            <div class="footer__block">
+                                <h2 class="footer__title">客服資訊</h2>
+                                <ul class="footer__nav">
+                                    <li class="footer__nav-item">常見問題</li>
+                                    <li class="footer__nav-item">聯絡我們</li>
+                                </ul>
+                            </div>
+                            <div class="footer__block">
+                                
+                                <ul class="footer__social">
+                                    <li class="footer__social-item">
+                                        <a href=""></a>
+                                        INSTAGRAM
+                                    </li>
+                                    <li class="footer__social-item">
+                                        <a href=""></a>
+                                        FACEBOOK
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="footer__copy">
+                        <span>©2022 BY NUTC SMALL GROUP</span>
+                    </div>
+                </footer>
+            </section>
+            
+        </div>
+        
+        
+
+    </body>
+    <script type="module" src="/main.3e8df308.js"></script>
+    <script src="/home.70aed714.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="/scroll.19695bc1.js"></script>
+    
+</html>

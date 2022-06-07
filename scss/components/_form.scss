@@ -16,7 +16,7 @@
         display: block;
         transition: all .3s;
 
-        @include respond(tab-port) {
+        @include respond(max-950) {
             width: 100%;
         }
 
@@ -107,13 +107,12 @@
 
 // edit form 
 
-.profile__edit{
-    // display: none;
-}
+
 .account__form{
     margin-top: 4rem;
     line-height: 1.7;
     display: none;
+    font-size: $small-font-size;
     .account__btn{
         display: -webkit-box;
         display: -ms-flexbox;
@@ -140,6 +139,8 @@
                 color: $color-grey-dark-2;
             }
         }
+
+        
     }
 }
 
@@ -171,7 +172,7 @@
         display: block;
     }
     .edit__account{
-        width: 10rem;
+        width: 15rem;
     }
 
 

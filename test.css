@@ -1,0 +1,370 @@
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+* {
+  font-size: 18px;
+}
+h1 {
+  font-weight: 500 !important;
+}
+/* Style the tab */
+.tab,
+.betab,
+.patab,
+.tictab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  border-bottom: none;
+  /* background-color: #f1f1f1; */
+  width: 15%;
+}
+.tab {
+  position: relative;
+  height: 600px;
+}
+.patab {
+  display: flex;
+  width: 60%;
+  height: 57px;
+  text-align: center;
+}
+.betab {
+  display: flex;
+  width: 50%;
+  height: 57px;
+  text-align: center;
+}
+.tictab,
+.usertab {
+  width: 35%;
+  height: 57px;
+  /* text-align: center; */
+}
+/* Style the buttons inside the tab */
+/* .tab button,.betab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+} */
+
+/* Change background color of buttons on hover */
+/* .tab button:hover,.betab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current tablink class */
+.tablinks.active {
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 5px solid #000000;
+}
+
+/* Style the tab content */
+.tabcontent,
+.betab_content,
+.patab_content {
+  padding: 0px 30px;
+  border-top: none;
+  width: 94%;
+}
+.tablinks,
+.betablink,
+.patablink,
+.tictablink,
+.usertablink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablinks:hover {
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 5px solid #000000;
+}
+.betablink:hover,
+.patablink:hover,
+.tictablink:hover,
+.usertablink:hover {
+  /* border: 2px solid #C6CACC; */
+  /* border-bottom: none; */
+  border-radius: 10px 10px 0px 0px;
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 5px solid #000000;
+}
+.betablink.active,
+.patablink.active,
+.tictablink.active,
+.usertablink {
+  /* border: 2px solid #C6CACC; */
+  /* border-bottom: none; */
+  border-radius: 10px 10px 0px 0px;
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 5px solid #000000;
+}
+.tictablink,
+.usertablink {
+  background-color: transparent;
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+  width: 25%;
+  line-height: 45px;
+  margin: auto;
+  background-color: transparent;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 5px solid #000000;
+}
+.betablink,
+.patablink {
+  background-color: transparent;
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+  width: 20%;
+  line-height: 45px;
+  margin: auto;
+  /* display: block; */
+}
+li {
+  list-style: none;
+}
+ul {
+  display: flex;
+}
+#head,
+#head_s {
+  width: 96%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+}
+#ic {
+  width: 13%;
+  margin: 5px;
+}
+#head_f {
+  width: 80%;
+  text-align: center;
+}
+#head_r {
+  width: 7%;
+  position: absolute;
+  right: 0;
+}
+.log {
+  width: 80%;
+  color: #367bf5;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: #367bf5 1px solid;
+  box-shadow: 0px 1px 3px 0px #367bf5, 0px 0px 0px 0px #367bf5 inset;
+  line-height: 30px;
+}
+.log:hover {
+  background-color: #367bf5;
+  color: #ffffff;
+  cursor: pointer;
+}
+#he_rr {
+  width: 88%;
+  display: flex;
+  align-items: center;
+}
+#he_b {
+  width: 2%;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+#he_pp {
+  width: 20%;
+}
+#ticdatee {
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 20px;
+}
+#datee {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 20px;
+  /* border-radius: 10px; */
+}
+#head_s {
+  border-bottom: 1px #367bf5 solid;
+}
+#body_right {
+  width: 100%;
+}
+#bord {
+  border: rgba(0, 0, 0, 0.759) 1px solid;
+}
+#goods_tit {
+  background-color: transparent;
+  line-height: 40px;
+  width: 100%;
+}
+.edit_btn {
+  background-color: #ee1e1e !important;
+  font-size: 17px;
+}
+.body_btn {
+  line-height: 30px;
+  background-color: #1ea4ee;
+  border: none;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.body_btn:hover,
+.edit_btn:hover {
+  opacity: 0.8;
+}
+#goodsti_li {
+  width: 94%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#update {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f7f9fa;
+}
+.phonesear {
+  width: 200px;
+  height: 30px;
+  border: solid 1px #ccc;
+}
+.three {
+  width: 300px;
+  height: 30px;
+  border-right: none;
+  border: solid 1px #ccc;
+}
+.fa-magnifying-glass {
+  color: #ffffff;
+}
+.search {
+  line-height: 20px;
+  background-color: #1ea4ee;
+  border: none;
+  color: #ffffff;
+  padding: 5px 15px;
+  box-shadow: 0px 1px 3px 0px #367bf5, 0px 0px 0px 0px #367bf5 inset;
+}
+#bodyle_set {
+  position: absolute;
+  bottom: 0;
+  width: 14%;
+  display: none;
+}
+.sett {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* line-height: 50px; */
+  /* border-bottom: 1px #367BF5 solid; */
+}
+.dash_tit {
+  font-size: 23px;
+  font-weight: bold;
+}
+.upload_cover {
+  width: 160px;
+  height: 200px;
+}
+.upload_cover:hover {
+  opacity: 0.9;
+}
+.detailupload_cover {
+  width: 150px;
+  height: 180px;
+}
+.img_update {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  background: #efefef;
+  border: 1px solid #595656;
+  margin: 10px;
+}
+#upload_input {
+  display: none;
+}
+.upload_icon {
+  font-weight: bold;
+  font-size: 300%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 38%;
+}
+.delAvatar {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+.show {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.show_area {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: flex-end;
+}
+/* chart */
+.wrap {
+  width: 50%;
+  display: flex;
+}
+.barr,
+#chart-area {
+  width: 50%;
+}
+.chart-container,
+.chart-bar {
+  width: 90%;
+  margin: auto;
+}
+#chart {
+  width: 80%;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+.mr-5 {
+  margin-right: 5px;
+}

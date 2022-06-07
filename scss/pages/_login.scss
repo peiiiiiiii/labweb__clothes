@@ -140,15 +140,19 @@
                 cursor:auto !important;
             }
             a{
-                margin-top: 1rem;
+                margin-top: $xsmall-font-size;
                 font-size:1rem;
                 text-align: center;
                 background-color: $color-black;
-                width: 8rem;
+                width: 12rem;
                 color: $color-white;
-                padding: .4rem 2rem;
+                padding: .8rem 2rem;
                 display: inline-block;
             }
         }
     }
+}
+
+.profile__email{
+    cursor:not-allowed;
 }

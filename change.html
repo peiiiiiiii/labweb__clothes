@@ -1,0 +1,147 @@
+        <!-- 編輯商品 -->
+        <div class="editform" id="editform" style="display: none">
+            <div class="editform" id="editregister" style="display: none">
+              <div class="editform" id="editregister" style="display:none">
+                <div class="signclose">
+                  <img src="img/delete.png" width="35px" height="35px" onclick="editclose()" />
+                </div>
+              </div>
+              <div style="color: #000">
+                <p style="font-weight: 600; font-size: 30px">編輯商品</p>
+              </div>
+              <div
+                style="width: 100%;display: flex;align-items: center;text-align: center;border-bottom: #e3e5e5 1px solid;color: #fff;">
+                <p style="width: 25%; color: #919699; line-height: 10px">
+                  商品名稱
+                </p>
+                <p style="width: 25%; color: #919699">商品介紹</p>
+                <p style="width: 25%; color: #919699">材質</p>
+                <p style="width: 25%; color: #919699">上架</p>
+              </div>
+              <div style="width: 100%;display: flex;align-items: center;text-align: center;height: 40px;">
+                <div style="width: 25%">
+                  <input type="text" style="width: 80%;margin-left: 2px;margin-right: 2px;line-height: 10px;" />
+                </div>
+                <div style="width: 25%">
+                  <textarea id="story" name="story" rows="1" cols="20"
+                    style="width: 80%; margin-left: 2px; margin-right: 2px"></textarea>
+                </div>
+                <div style="width: 25%">
+                  <input type="text" style="width: 80%;margin-left: 2px;margin-right: 2px;line-height: 10px;" />
+                </div>
+                <div class="switch" style="margin: auto">
+                  <input class="switch-checkbox" id="I_isReleased" type="checkbox" name="switch-checkbox" />
+                  <label class="switch-label" for="I_isReleased">
+                    <span class="switch-txt" turnOn="上架" turnOff="下架"></span>
+                    <span class="switch-Round-btn"></span>
+                  </label>
+                </div>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border-bottom: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 25%; color: #919699; line-height: 10px">
+                  價錢
+                </p>
+                <p style="width: 25%; color: #919699">特價</p>
+                <p style="width: 25%; color: #919699">種類</p>
+                <p style="width: 25%; color: #919699">尺寸</p>
+              </div>
+              <div style="width: 100%;display: flex;align-items: center;text-align: center;">
+                <div style="width: 25%;display: flex;align-items: center;justify-content: center;">
+                  <p>NT$</p>
+                  <input type="number" style="height: 25px" />
+                </div>
+                <div style="width: 25%;display: flex;align-items: center;justify-content: center;">
+                  <p>NT$</p>
+                  <input type="number" style="height: 25px" />
+                </div>
+                <select name="item" id="item" style="width: 25%">
+                  <option value="">長褲</option>
+                  <option value="">短袖</option>
+                  <option value="">外套</option>
+                </select>
+                <p style="width: 25%">
+                  <input type="checkbox" id="size" value="" />
+                  <label for="size">S</label>
+                  <input type="checkbox" id="size" value="" />
+                  <label for="size">M</label>
+                  <input type="checkbox" id="size" value="" />
+                  <label for="size">L</label>
+                </p>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    border-bottom: #e3e5e5 1px solid;
+                  ">
+                <p style="width: 70%; color: #919699">色卡</p>
+                <p style="width: 30%; color: #919699; line-height: 10px">
+                  類別
+                </p>
+              </div>
+              <div style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                  ">
+                <div style="
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      text-align: center;
+                    " id="color__list">
+                </div>
+  
+                <p style="width: 40%">
+                  <input type="checkbox" id="news" value="" />
+                  <label for="news">男裝</label>
+                  <input type="checkbox" id="news" value="" />
+                  <label for="news">女裝</label>
+                  <input type="checkbox" id="news" value="" />
+                  <label for="news">新品</label>
+                </p>
+              </div>
+  
+              <div style="
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    width: 90%;
+                  ">
+                <p>商品圖片：</p>
+                <label class="upload_cover img_update">
+                  <input id="upload_input" class="upload_input" type="file"
+                    onchange="img_Upload(this.files ,'upload_img' , 'upload_input')" />
+                  <img id="upload_img" src="" />
+                  <span class="upload_icon">➕</span>
+                  <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+                </label>
+                <label class="upload_cover img_update">
+                  <input id="upload_input" class="upload_input" type="file"
+                    onchange="img_Upload(this.files ,'upload_img' , 'upload_input')" />
+                  <img id="upload_img" src="" />
+                  <span class="upload_icon">➕</span>
+                  <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+                </label>
+                <label class="upload_cover img_update">
+                  <input id="upload_input" class="upload_input" type="file"
+                    onchange="img_Upload(this.files ,'upload_img' , 'upload_input')" />
+                  <img id="upload_img" src="" />
+                  <span class="upload_icon">➕</span>
+                  <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+                </label>
+                <div class="postdiv"><button>送出</button></div>
+              </div>
+            </div>
+            <div class="signclose">
+              <img src="./img/close.png" width="20px" height="20px" onclick="editclose()" />
+            </div>
+          </div>
